@@ -161,7 +161,9 @@ a { text-decoration: none; }
    HERO
    ============================================================ */
 .hero {
-  background: linear-gradient(140deg, var(--primary) 0%, #0e2e4f 60%, #1a3a5c 100%);
+  background:
+    linear-gradient(140deg, rgba(10,37,64,.92) 0%, rgba(14,46,79,.88) 60%, rgba(26,58,92,.82) 100%),
+    url('https://picsum.photos/seed/accellink-hero/1800/1000') center/cover no-repeat;
   color: var(--white);
   padding: 108px 0 88px;
   position: relative;
@@ -249,7 +251,9 @@ a { text-decoration: none; }
 .section { padding: 96px 0; }
 .section--gray { background: var(--gray-50); }
 .section--dark {
-  background: var(--primary);
+  background:
+    linear-gradient(180deg, rgba(10,37,64,.93), rgba(10,37,64,.96)),
+    url('https://picsum.photos/seed/accellink-results/1800/900') center/cover no-repeat;
   color: var(--white);
 }
 
@@ -574,13 +578,15 @@ a { text-decoration: none; }
   margin-top: 48px;
 }
 .profile__avatar {
-  width: 160px; height: 160px;
+  width: 180px; height: 180px;
   border-radius: 50%;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  background: url('https://picsum.photos/seed/accellink-profile/400/400') center/cover no-repeat, linear-gradient(135deg, var(--primary), var(--primary-light));
+  flex-shrink: 0;
+  box-shadow: var(--shadow-md);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 3.5rem;
+  font-size: 0;
   font-weight: 900;
   color: rgba(255,255,255,.6);
   flex-shrink: 0;
