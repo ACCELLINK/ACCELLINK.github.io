@@ -771,6 +771,11 @@ a { text-decoration: none; }
   margin-bottom: 8px;
 }
 .footer__logo span { color: var(--accent); }
+.footer__address {
+  font-size: .78rem;
+  color: rgba(255,255,255,.5);
+  margin-bottom: 6px;
+}
 .footer__copy {
   font-size: .78rem;
   color: rgba(255,255,255,.35);
