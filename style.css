@@ -799,19 +799,30 @@ a { text-decoration: none; }
   padding-left: 12px;
   border-left: 2px solid var(--gray-200);
 }
-.industry-card__tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.industry-card__points {
+  list-style: none;
   margin-bottom: 20px;
 }
-.industry-card__tags span {
-  font-size: .72rem;
-  font-weight: 700;
-  color: var(--primary);
-  background: rgba(10,37,64,.07);
-  padding: 4px 12px;
-  border-radius: 20px;
+.industry-card__points li {
+  font-size: .82rem;
+  color: var(--gray-600);
+  padding: 5px 0;
+  padding-left: 14px;
+  position: relative;
+  line-height: 1.55;
+  border-bottom: 1px solid var(--gray-200);
+}
+.industry-card__points li:last-child { border-bottom: none; }
+.industry-card__points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 .industry-card__cta {
   font-size: .85rem;
