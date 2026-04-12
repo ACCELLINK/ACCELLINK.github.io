@@ -822,13 +822,12 @@ a { text-decoration: none; }
   border-left: 2px solid rgba(255,255,255,.3);
 }
 .industry-card__tags {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
 }
-.industry-card__tags li {
+.industry-card__tags span {
   font-size: .72rem;
   font-weight: 700;
   color: rgba(255,255,255,.9);
@@ -841,14 +840,15 @@ a { text-decoration: none; }
   font-size: .85rem;
   font-weight: 700;
   color: rgba(255,255,255,.85);
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  transition: gap var(--transition);
 }
 .industry-card:hover .industry-card__cta {
-  gap: 12px;
   color: var(--white);
+}
+.industry-card__link {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: var(--radius-lg);
 }
 
 /* ============================================================
