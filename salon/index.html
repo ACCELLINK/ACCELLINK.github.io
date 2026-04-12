@@ -131,15 +131,16 @@
     }
 
     @media (max-width: 900px) {
-      .cost-compare {
-        grid-template-columns: 1fr;
-        padding: 28px 20px;
-      }
-      .cost-vs { transform: rotate(90deg); }
+      .cost-compare { padding: 24px 16px; gap: 12px; }
+      .cost-box { padding: 20px 16px; }
+      .cost-box__num { font-size: 1.5rem; }
       .channel-grid { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-      .cost-compare { padding: 20px; }
+    @media (max-width: 480px) {
+      .cost-compare { padding: 16px 10px; gap: 8px; }
+      .cost-box { padding: 16px 12px; }
+      .cost-box__num { font-size: 1.2rem; }
+      .cost-vs { font-size: 1rem; }
     }
   </style>
 </head>
@@ -175,7 +176,7 @@
   </div>
 
   <!-- ========== HERO ========== -->
-  <section class="hero" style="background: linear-gradient(140deg, rgba(30,8,48,.94) 0%, rgba(52,12,78,.90) 55%, rgba(68,18,95,.85) 100%), url('https://picsum.photos/seed/salon-hero/1800/1000') center/cover no-repeat;">
+  <section class="hero">
     <div class="container hero-inner">
       <div class="industry-badge">💅 美容室・エステ・ネイル・まつエク サロン専門</div>
       <h1 class="hero-title">
