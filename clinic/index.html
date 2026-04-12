@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>クリニック・歯科医院のWeb集客 | ACCEL LINK</title>
+  <meta name="description" content="地域検索で競合に負けているクリニック・歯科医院向け。MEO・SEO・口コミ管理で新患を安定獲得。自由診療の認知向上もサポート。無料診断実施中。">
+  <meta property="og:title" content="クリニック・歯科医院のWeb集客 | ACCEL LINK">
+  <meta property="og:description" content="地域検索で選ばれるクリニックのWeb戦略。MEO・SEO・口コミ管理で新患を安定獲得。無料診断実施中。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .breadcrumb {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 10px 0;
+    }
+    .breadcrumb__inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      color: var(--gray-600);
+    }
+    .breadcrumb__inner a { color: var(--gray-600); }
+    .breadcrumb__inner a:hover { color: var(--accent); }
+    .breadcrumb__sep { color: var(--gray-400); }
+
+    .industry-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,90,31,.12);
+      border: 1px solid rgba(255,90,31,.3);
+      color: #ffb89a;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .compliance-note {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.15);
+      border-radius: var(--radius-sm);
+      padding: 16px 20px;
+      font-size: .8rem;
+      color: rgba(255,255,255,.6);
+      margin-top: 24px;
+      line-height: 1.7;
+    }
+    .compliance-note strong { color: rgba(255,255,255,.85); }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .trust-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 28px;
+      border-left: 4px solid var(--accent);
+      box-shadow: var(--shadow);
+    }
+    .trust-card__icon { font-size: 2rem; margin-bottom: 14px; }
+    .trust-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .trust-card p {
+      font-size: .875rem;
+      color: var(--gray-600);
+      line-height: 1.8;
+    }
+
+    .search-preview {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-md);
+      padding: 32px;
+      margin-top: 48px;
+    }
+    .search-preview__title {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--gray-600);
+      letter-spacing: .06em;
+      margin-bottom: 20px;
+    }
+    .search-result {
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-sm);
+      padding: 20px;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .search-result--top {
+      border-color: var(--accent);
+      background: #FFF5F0;
+    }
+    .search-result__rank {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--accent);
+      color: var(--white);
+      font-size: .7rem;
+      font-weight: 700;
+      padding: 2px 10px;
+      border-radius: 20px;
+    }
+    .search-result__rank--gray {
+      background: var(--gray-400);
+    }
+    .search-result__name {
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .search-result__stars {
+      font-size: .8rem;
+      color: #f59e0b;
+      margin-bottom: 4px;
+    }
+    .search-result__meta {
+      font-size: .78rem;
+      color: var(--gray-600);
+    }
+    .search-preview__label {
+      text-align: center;
+      font-size: .875rem;
+      font-weight: 700;
+      color: var(--gray-600);
+      margin-top: 20px;
+    }
+    .search-preview__label span { color: var(--accent); }
+
+    @media (max-width: 768px) {
+      .trust-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">ACCEL<span>LINK</span></a>
+      <nav class="nav" id="nav">
+        <a href="#problems">課題</a>
+        <a href="#trust">信頼構築</a>
+        <a href="#services">サービス</a>
+        <a href="#results">実績</a>
+        <a href="#flow">流れ</a>
+        <a href="#contact" class="nav-cta">無料診断を受ける</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== BREADCRUMB ========== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb__inner">
+        <a href="../index.html">トップ</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>クリニック・歯科医院向け</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="industry-badge">🏥 内科・歯科・皮膚科・整形外科・美容クリニック 専門</div>
+      <h1 class="hero-title">
+        「近くの歯科」で検索した患者に、<br>
+        <em>選ばれるクリニック</em>になる。
+      </h1>
+      <p class="hero-sub">
+        患者さんが病院を選ぶとき、Googleマップの口コミと検索順位が決め手になっています。<br class="pc-only">
+        競合クリニックより先にGoogleマップで見つけてもらい、口コミと情報量で信頼を勝ち取る。<br class="pc-only">
+        医療広告ガイドラインに配慮しながら、適切なWeb戦略を構築します。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn--primary">無料診断を申し込む（費用ゼロ）</a>
+        <a href="#problems" class="btn btn--ghost">よくある課題を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat__num">¥1億<small>/月</small></span>
+          <span class="hero-stat__label">広告運用実績</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">50万<small>セッション×2</small></span>
+          <span class="hero-stat__label">SEOメディア運用</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">月3万円<small>〜</small></span>
+          <span class="hero-stat__label">サポート開始価格</span>
+        </div>
+      </div>
+      <div class="compliance-note">
+        ※ 医療広告ガイドラインに準拠した施策のみを実施します。<strong>比較広告・誇大表現・体験談の無断掲載</strong>などには対応しておりません。適切な範囲でのWeb集客を支援します。
+      </div>
+    </div>
+    <div class="hero-bg-orb"></div>
+  </section>
+
+  <!-- ========== PROBLEMS ========== -->
+  <section class="section section--gray" id="problems">
+    <div class="container">
+      <div class="section-eyebrow">こんなお悩みはありませんか？</div>
+      <h2 class="section-title">クリニック・歯科が抱える<br>Web集患の課題</h2>
+      <div class="grid grid--3">
+        <div class="card card--problem">
+          <div class="card__icon">🔍</div>
+          <h3>「地域名＋歯科・内科」の検索で競合クリニックに負けている</h3>
+          <p>Googleマップ・Google検索の両方で競合より下位に表示されている。新患がなかなか増えない原因がWeb集患にあると感じている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">⭐</div>
+          <h3>Googleの口コミが少なく、返信もできていない</h3>
+          <p>競合クリニックは口コミ100件以上あるのに自院は10件以下。ネガティブな口コミへの対処法もわからない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">🏚️</div>
+          <h3>ホームページが古く、スマホ非対応・情報が少ない</h3>
+          <p>10年前に作ったサイトが今も使われている。診療時間・アクセス・診療メニューが探しにくく、来院前に離脱されている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">💊</div>
+          <h3>自由診療・専門メニューの認知が低い</h3>
+          <p>ホワイトニング・インプラント・美容皮膚科メニューなど自由診療があるが、既存患者・地域住民に知られていない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">📋</div>
+          <h3>医療広告ガイドラインが怖くてWeb活用に踏み切れない</h3>
+          <p>「何がOKで何がNGか」の基準がわからず、SNS活用や広告出稿を避けている。結果的に競合に差をつけられている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">📅</div>
+          <h3>予約・問い合わせの導線がわかりにくい</h3>
+          <p>ホームページを見た患者さんが「どこから予約すればいいかわからない」状態になっており、来院前に離脱されている。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BRIDGE ========== -->
+  <section class="bridge">
+    <div class="container">
+      <p>
+        患者さんはクリニックを選ぶ前に必ずGoogle検索をします。<strong>見つけてもらえなければ、存在しないのと同じです。</strong><br>
+        医療広告ガイドラインの範囲内で、<strong>Googleマップ・ホームページ・口コミを整備するだけで新患数は変わります。</strong>
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SEARCH PREVIEW ========== -->
+  <section class="section" id="trust">
+    <div class="container">
+      <div class="section-eyebrow">患者さんの検索行動</div>
+      <h2 class="section-title">「地域名＋歯科」で検索したとき<br>患者さんが見ているもの</h2>
+      <p class="section-sub">Googleマップの上位3枠（ローカルパック）が最初に目に入ります。口コミ数・評価・情報量が選ばれる理由になります。</p>
+      <div class="search-preview">
+        <div class="search-preview__title">Googleマップ検索結果イメージ：「○○市 歯科」</div>
+        <div class="search-result search-result--top">
+          <div class="search-result__rank">1位</div>
+          <div class="search-result__name">○○デンタルクリニック</div>
+          <div class="search-result__stars">★★★★★ 4.8（口コミ112件）</div>
+          <div class="search-result__meta">診療時間・写真20枚・最新投稿あり → 予約しやすい</div>
+        </div>
+        <div class="search-result">
+          <div class="search-result__rank search-result__rank--gray">2位</div>
+          <div class="search-result__name">△△歯科医院</div>
+          <div class="search-result__stars">★★★★☆ 4.2（口コミ38件）</div>
+          <div class="search-result__meta">写真5枚・投稿なし</div>
+        </div>
+        <div class="search-result">
+          <div class="search-result__rank search-result__rank--gray">3位</div>
+          <div class="search-result__name">□□クリニック（あなたの医院）</div>
+          <div class="search-result__stars">★★★☆☆ 3.5（口コミ8件）</div>
+          <div class="search-result__meta">写真2枚・情報が少ない → 選ばれにくい</div>
+        </div>
+        <div class="search-preview__label">口コミ数・評価・情報量を改善することで<span>上位2枠に入ることができます</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TRUST ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-eyebrow">医療業界の特性</div>
+      <h2 class="section-title">クリニック・歯科のWeb集患で<br>重要な4つのポイント</h2>
+      <div class="trust-grid">
+        <div class="trust-card">
+          <div class="trust-card__icon">🗺️</div>
+          <h3>MEOが最も即効性が高い</h3>
+          <p>「近くの歯科を探す」という検索意図を持つ患者さんにリーチするには、Googleマップの最適化が最短・最低コストです。口コミ数・評価・写真・診療時間の正確さが順位を決めます。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card__icon">⭐</div>
+          <h3>口コミ管理が信頼構築の鍵</h3>
+          <p>ポジティブな口コミを増やすだけでなく、ネガティブな口コミへの適切な返信も重要です。返信の内容・トーンが「患者さんへの対応姿勢」として評価されます。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card__icon">📋</div>
+          <h3>医療広告ガイドラインへの対応</h3>
+          <p>比較広告・体験談・誇大表現はNGです。しかし、院内の設備紹介・診療の流れ・スタッフ紹介・Q&Aなど、ガイドラインの範囲内でできることは多くあります。正確な知識で安全に運用します。</p>
+        </div>
+        <div class="trust-card">
+          <div class="trust-card__icon">💊</div>
+          <h3>自由診療は「見つけてもらう」設計が必要</h3>
+          <p>ホワイトニング・インプラント・美容皮膚科などは、「知らない」患者さんに知ってもらうためのコンテンツ設計が必要です。既存患者への認知向上と、新規患者の獲得を分けて設計します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-eyebrow">サービス内容</div>
+      <h2 class="section-title">クリニック・歯科向け<br>対応施策</h2>
+      <p class="section-sub">医療広告ガイドラインに準拠した施策のみを実施します。どの施策を使うかは無料診断・ヒアリング後に決めます。</p>
+      <div class="grid grid--3 grid--services">
+        <div class="card card--service">
+          <div class="card__icon">🗺️</div>
+          <h3>MEO対策（Googleマップ最適化）</h3>
+          <p>「地域名＋診療科・クリニック名」の検索でマップ上位に表示させる施策。口コミ獲得の仕組みづくり・写真最適化・診療時間の正確な更新管理を行います。</p>
+          <div class="card__tag">月3万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">🔍</div>
+          <h3>SEO対策（ホームページ検索上位）</h3>
+          <p>「症状名＋地域」「自由診療メニュー＋地域」などのキーワードで検索上位を狙う施策。診療科別コンテンツの充実・患者さんのQ&A記事などを制作します。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">⭐</div>
+          <h3>口コミ管理・返信サポート</h3>
+          <p>Googleマップの口コミを増やす仕組みづくりと、既存口コミへの適切な返信文の作成サポートを行います。ネガティブな口コミへの対処法も含めて支援します。</p>
+          <div class="card__tag">月3万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">🌐</div>
+          <h3>ホームページ改善・制作</h3>
+          <p>スマホ非対応・情報が少ない・予約導線がわかりにくいサイトを改善。診療メニュー・アクセス・スタッフ紹介を整え、「来院前の不安を解消する」サイトに改善します。</p>
+          <div class="card__tag">スポット / 月額サポート</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">📢</div>
+          <h3>Web広告運用（Google広告）</h3>
+          <p>「今すぐ受診したい」という検索意図の高い患者さんにリーチ。医療広告ガイドラインに準拠した広告文・ランディングページで、適切な集患を行います。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service card--service-free">
+          <div class="card__icon">🎁</div>
+          <h3>無料Web診断レポート</h3>
+          <p>現状のGoogleマップ・サイト・競合クリニックとの比較を診断レポートとしてお渡しします。「何から手をつけるべきか」が明確になります。費用は一切かかりません。</p>
+          <div class="card__tag card__tag--free">完全無料</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESULTS ========== -->
+  <section class="section section--dark" id="results">
+    <div class="container">
+      <div class="section-eyebrow section-eyebrow--light">なぜACCEL LINKに頼むのか</div>
+      <h2 class="section-title section-title--light">大手企業で証明した実績を<br>地域クリニックの集患に</h2>
+      <div class="grid grid--3">
+        <div class="card card--result">
+          <div class="card__result-num">¥1億<span>/月</span></div>
+          <h3>広告費の運用実績</h3>
+          <p>上場企業にて月額1億円規模の広告費を担当。Google広告の医療・ヘルスケア分野の広告ポリシーへの対応経験があります。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">50万<span>セッション×2</span></div>
+          <h3>SEOメディア運用実績</h3>
+          <p>月間50万セッション超のオウンドメディアを2媒体同時に運用。「症状名＋地域」などの医療系キーワードでの検索上位獲得ノウハウを持っています。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">¥6,000万<span>/月</span></div>
+          <h3>SEO収益化実績</h3>
+          <p>SEOで集めたトラフィックを月6,000万円超の収益に転換。「訪問者を来院予約に変える」コンテンツ設計・ページ設計のノウハウがあります。</p>
+        </div>
+      </div>
+      <div class="results-note">
+        <strong>「医療広告ガイドラインが怖くて何もできない」は正しくありません。</strong><br>
+        正確なガイドライン知識のもと、適切な範囲でのWeb集患を設計します。患者対応に集中してください。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOW ========== -->
+  <section class="section section--gray" id="flow">
+    <div class="container">
+      <div class="section-eyebrow">支援の流れ</div>
+      <h2 class="section-title">診断から施策開始まで<br>最短1週間</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-item__num">01</div>
+          <div class="flow-item__body">
+            <h3>無料診断レポートを受け取る</h3>
+            <p>フォームからご連絡いただくと、3営業日以内に現状のGoogleマップ・サイト・競合クリニックとの比較を診断レポートとしてお送りします。費用ゼロ・売り込みなし。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">02</div>
+          <div class="flow-item__body">
+            <h3>無料ヒアリング（オンライン or 対面）</h3>
+            <p>現状の集患状況・課題・目標を伺います。「ガイドラインの範囲内で何ができるか」についても具体的にご説明します。30〜60分程度。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">03</div>
+          <div class="flow-item__body">
+            <h3>施策プランの提案</h3>
+            <p>医療広告ガイドラインに準拠した施策プランを提案します。「何をやって、何はやらないか」を明確にします。予算に合わせて1〜2本に絞ります。</p>
+          </div>
+        </div>
+        <div class="flow-item flow-item--last">
+          <div class="flow-item__num">04</div>
+          <div class="flow-item__body">
+            <h3>契約・施策スタート</h3>
+            <p>最短1週間で施策を開始。月次レポートでGoogleマップの表示回数・口コミ数・サイト流入数などの変化を共有します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-eyebrow">料金目安</div>
+      <h2 class="section-title">まず予算を教えてください。<br>その予算内で最善を提案します。</h2>
+      <p class="section-sub">固定プランはありません。無料診断・面談後にヒアリングして、予算に合わせたサポート内容を一緒に決めます。</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 3〜5万円</div>
+          <div class="pricing-card__target">まずMEO・口コミ管理から</div>
+          <p class="pricing-card__example">例）Googleマップの最適化・口コミ獲得の仕組みづくり・ネガティブ口コミへの返信サポートに集中します。</p>
+        </div>
+        <div class="pricing-card pricing-card--popular">
+          <div class="pricing-card__badge">相談が多い予算帯</div>
+          <div class="pricing-card__range">月 5〜8万円</div>
+          <div class="pricing-card__target">MEO＋サイト改善で本格集患</div>
+          <p class="pricing-card__example">例）MEO対策＋サイトの予約動線改善・コンテンツ充実をセット。新患獲得の仕組みを総合的に整えます。</p>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 10万円〜</div>
+          <div class="pricing-card__target">広告＋SEO＋MEOを総合展開</div>
+          <p class="pricing-card__example">例）Google広告で即効性を確保しながら、SEO・MEOで自由診療メニューの認知向上も同時に進めます。</p>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <ul>
+          <li>具体的なサポート内容・料金は無料診断・面談後にご提案します</li>
+          <li>広告費はクライアント負担（サポート料金に含まれません）</li>
+          <li>医療広告ガイドラインへの準拠確認を含めた対応を行います</li>
+          <li>最低契約期間：3ヶ月〜</li>
+          <li>まずは<strong>無料診断</strong>から。費用は一切かかりません。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section--gray" id="faq">
+    <div class="container">
+      <div class="section-eyebrow">よくある質問</div>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">医療広告ガイドラインに違反しないか心配です。</button>
+          <div class="faq-a"><p>医療広告ガイドラインに準拠した施策のみを実施します。比較広告・体験談・誇大表現には対応しません。スタッフ紹介・院内設備・診療の流れ・症状別Q&Aなど、ガイドラインの範囲内でできることは多くあります。事前に確認・承認いただいた内容のみを公開します。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">ネガティブな口コミへの対処はできますか？</button>
+          <div class="faq-a"><p>はい、対応可能です。ネガティブな口コミへの返信文を作成します。感情的にならず、誠実かつ適切なトーンで返信することで、第三者からの評価が上がるケースも多いです。また、Googleへの口コミ削除申請が妥当なケースについても助言します。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">口コミを増やすにはどうすればいいですか？</button>
+          <div class="faq-a"><p>診察後・会計後の自然なタイミングでGoogleマップへの口コミを誘導する導線を設計します。QRコードを活用したポップ設置・受付での一言案内など、スタッフの負担が最小になる方法をご提案します。見返りを提供してのレビュー依頼はGoogleポリシー違反となるため行いません。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">自由診療（インプラント・ホワイトニング等）の集患もできますか？</button>
+          <div class="faq-a"><p>はい、対応可能です。「インプラント＋地域名」「ホワイトニング＋地域名」などのキーワードでの検索上位獲得や、Googleマップでの自由診療メニューの適切な表示、既存患者さんへの認知向上施策を設計します。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">ホームページの全面リニューアルも対応できますか？</button>
+          <div class="faq-a"><p>スポット対応として対応可能です。ただし、大規模なリニューアルより「まずMEOで集患を増やし、その後サイトを順次改善する」という段階的なアプローチをお勧めするケースが多いです。まずは無料診断でご相談ください。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / CONTACT ========== -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="section-eyebrow">無料診断</div>
+      <h2 class="section-title">まずは無料診断から。<br>貴院の現状を数値で見える化します。</h2>
+      <p class="section-sub">Googleマップ・ホームページ・競合クリニックとの比較を診断レポートとしてお渡しします。費用ゼロ・売り込みなし。3分で申し込み完了します。</p>
+      <div class="contact-form-wrap">
+        <div class="contact-cta-box">
+          <div class="contact-cta-checks">
+            <div class="contact-cta-check">✓ 費用は一切かかりません</div>
+            <div class="contact-cta-check">✓ 売り込みは一切しません</div>
+            <div class="contact-cta-check">✓ 医療広告ガイドライン準拠</div>
+          </div>
+          <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large btn--block">
+            無料診断を申し込む →
+          </a>
+          <p class="form-note">Googleフォームが開きます。3営業日以内にレポートをお送りします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">ACCEL<span>LINK</span></div>
+      <p class="footer__address">〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F</p>
+      <p class="footer__copy">© 2026 ACCEL LINK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

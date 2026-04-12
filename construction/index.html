@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>建築・リフォーム業界のWeb集客 | ACCEL LINK</title>
+  <meta name="description" content="ミツモア・ホームプロなどのポータル手数料に悩む建築・外壁塗装・屋根修理業者向け。MEO・SEO・自社サイト制作で自前の集客を実現。所沢・川越・入間エリア対応。無料診断実施中。">
+  <meta property="og:title" content="建築・リフォーム業界のWeb集客 | ACCEL LINK">
+  <meta property="og:description" content="ポータル手数料に頼らない自前集客を実現。MEO・SEO・HP制作で問い合わせを増やす。無料診断実施中。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    /* ===== 業界ページ共通追加スタイル ===== */
+    .breadcrumb {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 10px 0;
+    }
+    .breadcrumb__inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      color: var(--gray-600);
+    }
+    .breadcrumb__inner a { color: var(--gray-600); }
+    .breadcrumb__inner a:hover { color: var(--accent); }
+    .breadcrumb__sep { color: var(--gray-400); }
+
+    .industry-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,90,31,.12);
+      border: 1px solid rgba(255,90,31,.3);
+      color: #ffb89a;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 48px;
+      background: var(--white);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+    .compare-table thead th {
+      background: var(--primary);
+      color: var(--white);
+      padding: 16px 20px;
+      text-align: center;
+      font-size: .875rem;
+      font-weight: 700;
+    }
+    .compare-table thead th:first-child { text-align: left; }
+    .compare-table thead th.th-accent { background: var(--accent); }
+    .compare-table tbody tr { border-bottom: 1px solid var(--gray-200); }
+    .compare-table tbody tr:last-child { border-bottom: none; }
+    .compare-table tbody td {
+      padding: 16px 20px;
+      font-size: .875rem;
+      text-align: center;
+      color: var(--gray-600);
+    }
+    .compare-table tbody td:first-child {
+      text-align: left;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+    .compare-table .td-accent { font-weight: 700; color: var(--accent); }
+    .compare-table .bad { color: #dc2626; }
+    .compare-table .good { color: #16a34a; }
+
+    .voice-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .voice-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      position: relative;
+    }
+    .voice-card::before {
+      content: '"';
+      position: absolute;
+      top: 12px; left: 20px;
+      font-size: 4rem;
+      color: var(--accent);
+      opacity: .15;
+      line-height: 1;
+      font-family: Georgia, serif;
+    }
+    .voice-card__text {
+      font-size: .9rem;
+      color: var(--gray-900);
+      line-height: 1.85;
+      margin-bottom: 16px;
+    }
+    .voice-card__name {
+      font-size: .8rem;
+      font-weight: 700;
+      color: var(--gray-600);
+    }
+    .voice-card__name span {
+      color: var(--accent);
+      margin-right: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .voice-grid { grid-template-columns: 1fr; }
+      .compare-table { font-size: .82rem; }
+      .compare-table thead th,
+      .compare-table tbody td { padding: 12px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">ACCEL<span>LINK</span></a>
+      <nav class="nav" id="nav">
+        <a href="#problems">課題</a>
+        <a href="#compare">費用比較</a>
+        <a href="#services">サービス</a>
+        <a href="#results">実績</a>
+        <a href="#flow">流れ</a>
+        <a href="#contact" class="nav-cta">無料診断を受ける</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== BREADCRUMB ========== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb__inner">
+        <a href="../index.html">トップ</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>建築・リフォーム業界向け</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="industry-badge">🏠 建築・外壁塗装・屋根修理・リフォーム業界専門</div>
+      <h1 class="hero-title">
+        ミツモア頼みから脱却し、<br>
+        <em>自前の問い合わせ</em>を増やす。
+      </h1>
+      <p class="hero-sub">
+        ポータルサイトへの手数料を払い続けるより、自社サイトとGoogleマップを整備する方が<br class="pc-only">
+        長期的にコストは下がり、優良顧客との直接接点が増えます。<br class="pc-only">
+        月1億円規模の広告運用実績を持つマーケターが、使いやすい価格で支援します。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn--primary">無料診断を申し込む（費用ゼロ）</a>
+        <a href="#compare" class="btn btn--ghost">ポータルとの費用比較を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat__num">¥1億<small>/月</small></span>
+          <span class="hero-stat__label">広告運用実績</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">50万<small>セッション×2</small></span>
+          <span class="hero-stat__label">SEOメディア運用</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">月3万円<small>〜</small></span>
+          <span class="hero-stat__label">サポート開始価格</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg-orb"></div>
+  </section>
+
+  <!-- ========== PROBLEMS ========== -->
+  <section class="section section--gray" id="problems">
+    <div class="container">
+      <div class="section-eyebrow">こんなお悩みはありませんか？</div>
+      <h2 class="section-title">建築・リフォーム業者が<br>抱えるWeb集客の課題</h2>
+      <div class="grid grid--3">
+        <div class="card card--problem">
+          <div class="card__icon">💸</div>
+          <h3>ミツモア・ホームプロの手数料で利益が圧迫される</h3>
+          <p>成約のたびに10〜20%の手数料を取られ、薄利になっている。やめると案件が途絶えるのが怖くてやめられない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">🏚️</div>
+          <h3>自社サイトが古い、もしくはそもそも存在しない</h3>
+          <p>「サイトはあるが10年前に作ったまま」「スマホで見るとボロボロ」という状態で、信頼性が下がっている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">🔍</div>
+          <h3>「所沢 外壁塗装」で検索しても出てこない</h3>
+          <p>地域名＋業種でGoogle検索しても自社が上位に表示されず、同業の競合や大手ポータルに顧客を取られている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">⭐</div>
+          <h3>Googleマップの口コミが少なく競合に負けている</h3>
+          <p>近隣の競合は口コミ50件以上なのに自社は数件。Googleマップの検索結果で下位に埋もれてしまっている。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">📉</div>
+          <h3>閑散期の問い合わせが激減する</h3>
+          <p>繁忙期は問題ないが、閑散期は仕事が途絶える。通年で安定した案件を確保できる仕組みがない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">📞</div>
+          <h3>営業電話・飛び込みだけが新規開拓手段になっている</h3>
+          <p>Web経由の問い合わせがほぼゼロで、新規はすべてポータルか紹介。デジタルからの集客が仕組み化できていない。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BRIDGE ========== -->
+  <section class="bridge">
+    <div class="container">
+      <p>
+        ポータルサイトは「今すぐ案件が欲しい」時には便利ですが、<strong>手数料を払い続ける限り利益率は改善しません。</strong><br>
+        自社のGoogleマップとサイトを整備すれば、<strong>顧客が自分で調べて直接問い合わせてくれる</strong>仕組みが作れます。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== COMPARE ========== -->
+  <section class="section" id="compare">
+    <div class="container">
+      <div class="section-eyebrow">費用対効果の比較</div>
+      <h2 class="section-title">ポータル手数料と<br>自社集客、どちらが得か</h2>
+      <p class="section-sub">月5件受注・平均単価30万円のリフォーム業者の場合のシミュレーションです。</p>
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>ポータルサイト<br>（ミツモア等）</th>
+            <th class="th-accent">ACCEL LINK<br>（自社集客）</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>月額費用</td>
+            <td class="bad">約15万円<br><small>（手数料10%×5件×30万円）</small></td>
+            <td class="td-accent good">月5〜8万円<br><small>（コンサル料のみ）</small></td>
+          </tr>
+          <tr>
+            <td>顧客との関係</td>
+            <td class="bad">ポータル経由のため<br>直接関係が築きにくい</td>
+            <td class="good">直接問い合わせなので<br>信頼関係が作りやすい</td>
+          </tr>
+          <tr>
+            <td>価格競争</td>
+            <td class="bad">相見積もり前提で<br>値引き圧力が高い</td>
+            <td class="good">指名検索・口コミ経由で<br>値引き交渉が少ない</td>
+          </tr>
+          <tr>
+            <td>資産性</td>
+            <td class="bad">やめたら即ゼロに戻る</td>
+            <td class="good">サイト・口コミは<br>蓄積されていく</td>
+          </tr>
+          <tr>
+            <td>閑散期の対策</td>
+            <td class="bad">対策しにくい</td>
+            <td class="good">SEO・広告で<br>通年安定化を図れる</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section section--gray" id="services">
+    <div class="container">
+      <div class="section-eyebrow">サービス内容</div>
+      <h2 class="section-title">建築・リフォーム業者向け<br>対応施策</h2>
+      <p class="section-sub">どの施策を使うかは、無料診断・ヒアリング後に決めます。まず「何が一番効果的か」を診断します。</p>
+      <div class="grid grid--3 grid--services">
+        <div class="card card--service">
+          <div class="card__icon">🗺️</div>
+          <h3>MEO対策（Googleマップ最適化）</h3>
+          <p>「所沢 外壁塗装」「川越 屋根修理」などの地域検索でマップ上位に表示させる施策。口コミ獲得の仕組みづくりも含みます。競合の口コミ数・評価との差を数値で見える化します。</p>
+          <div class="card__tag">月3万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">🔍</div>
+          <h3>SEO対策（検索上位表示）</h3>
+          <p>自社サイトを「地域名＋業種」キーワードで検索上位に表示させる施策。施工事例ページの充実、地域特化コンテンツ制作など、リフォーム業界に合わせた戦略を立てます。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">🌐</div>
+          <h3>Webサイト制作・改善</h3>
+          <p>「サイトがない」「スマホ非対応」「施工事例が古い」という状態を解消。問い合わせが来やすい導線設計と、信頼感を高めるデザインでサイトを構築・改善します。</p>
+          <div class="card__tag">スポット / 月額サポート</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">📢</div>
+          <h3>Web広告運用（Google広告）</h3>
+          <p>「今すぐ屋根修理したい」という検索意図の高い見込み客にリーチするGoogle検索広告。少ない予算でも費用対効果を最大化します。広告費はクライアント負担。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">📸</div>
+          <h3>施工事例コンテンツ制作</h3>
+          <p>「before/after」施工事例はSEOにもMEOにも効果的なコンテンツです。既存の写真を活用し、検索流入と信頼性向上の両方に使えるコンテンツを制作します。</p>
+          <div class="card__tag">スポット対応</div>
+        </div>
+        <div class="card card--service card--service-free">
+          <div class="card__icon">🎁</div>
+          <h3>無料Web診断レポート</h3>
+          <p>現状のサイト・Googleマップ・SEO状況を診断し、何から手をつけるべきかをレポートでお渡しします。競合との比較も含めて数値でお伝えします。費用は一切かかりません。</p>
+          <div class="card__tag card__tag--free">完全無料</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESULTS ========== -->
+  <section class="section section--dark" id="results">
+    <div class="container">
+      <div class="section-eyebrow section-eyebrow--light">なぜACCEL LINKに頼むのか</div>
+      <h2 class="section-title section-title--light">大手企業で証明した実績を<br>地域の建築・リフォーム業者に</h2>
+      <div class="grid grid--3">
+        <div class="card card--result">
+          <div class="card__result-num">¥1億<span>/月</span></div>
+          <h3>広告費の運用実績</h3>
+          <p>上場企業にて月額1億円規模の広告費を担当。Google・Meta等複数プラットフォームを横断的に運用し、投資対効果を最大化してきました。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">50万<span>セッション×2</span></div>
+          <h3>SEOメディア運用実績</h3>
+          <p>月間50万セッション超のオウンドメディアを2媒体同時に運用。「地域名＋業種」での検索上位獲得に必要なSEO設計力を持っています。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">¥6,000万<span>/月</span></div>
+          <h3>SEO収益化実績</h3>
+          <p>SEOで集めたトラフィックを月6,000万円超の収益に転換。「流入を問い合わせに変える」ページ設計のノウハウを建築・リフォーム業者向けに応用します。</p>
+        </div>
+      </div>
+      <div class="results-note">
+        <strong>「Web担当者がいない」「デジタルに詳しくない」業者こそ、外部専門家に頼む時代です。</strong><br>
+        現場に集中してください。集客の仕組みづくりはACCEL LINKに任せてください。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOW ========== -->
+  <section class="section section--gray" id="flow">
+    <div class="container">
+      <div class="section-eyebrow">支援の流れ</div>
+      <h2 class="section-title">診断から施策開始まで<br>最短1週間</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-item__num">01</div>
+          <div class="flow-item__body">
+            <h3>無料診断レポートを受け取る</h3>
+            <p>フォームからご連絡いただくと、3営業日以内に現状のサイト・Googleマップ・競合比較をまとめた診断レポートをお送りします。費用ゼロ・売り込みなし。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">02</div>
+          <div class="flow-item__body">
+            <h3>無料ヒアリング（オンライン or 対面）</h3>
+            <p>現状の課題・予算感・目標件数をヒアリングします。所沢・川越・入間エリアは対面対応も可能です。30〜60分程度。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">03</div>
+          <div class="flow-item__body">
+            <h3>施策プランの提案</h3>
+            <p>予算に合わせて「まず何をやるべきか」を1〜2本に絞って提案します。「何をやって、何はやらないか」を明示するので判断しやすいです。</p>
+          </div>
+        </div>
+        <div class="flow-item flow-item--last">
+          <div class="flow-item__num">04</div>
+          <div class="flow-item__body">
+            <h3>契約・施策スタート</h3>
+            <p>最短1週間で施策を開始。月次レポートで数字の変化を共有しながら改善を続けます。最低契約期間は3ヶ月。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-eyebrow">料金目安</div>
+      <h2 class="section-title">まず予算を教えてください。<br>その予算内で最善を提案します。</h2>
+      <p class="section-sub">固定プランはありません。無料診断・面談後にお悩みをヒアリングして、予算に合わせたサポート内容を一緒に決めます。</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 3〜5万円</div>
+          <div class="pricing-card__target">まずMEOだけ改善したい方</div>
+          <p class="pricing-card__example">例）Googleマップの最適化・口コミ獲得の仕組みづくりに集中。最小コストで地域検索への露出を増やします。</p>
+        </div>
+        <div class="pricing-card pricing-card--popular">
+          <div class="pricing-card__badge">相談が多い予算帯</div>
+          <div class="pricing-card__range">月 5〜8万円</div>
+          <div class="pricing-card__target">MEO＋サイト改善を本格的に</div>
+          <p class="pricing-card__example">例）MEO対策＋既存サイトの改善（施工事例充実・SEO対応）を組み合わせ。ポータル依存を段階的に減らします。</p>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 10万円〜</div>
+          <div class="pricing-card__target">広告＋SEO＋MEOをまとめて</div>
+          <p class="pricing-card__example">例）Google広告で即効性を確保しながら、SEO・MEOで中長期の自前集客基盤を同時に構築します。</p>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <ul>
+          <li>具体的なサポート内容・料金は無料診断・面談後にご提案します</li>
+          <li>広告費はクライアント負担（サポート料金に含まれません）</li>
+          <li>最低契約期間：3ヶ月〜</li>
+          <li>まずは<strong>無料診断</strong>から。費用は一切かかりません。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section--gray" id="faq">
+    <div class="container">
+      <div class="section-eyebrow">よくある質問</div>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">ポータルサイトをやめても案件が確保できますか？</button>
+          <div class="faq-a"><p>すぐにやめる必要はありません。まずMEO・SEOで自前の問い合わせを少しずつ増やし、自社集客が安定してきた段階でポータルの比率を下げる、という順番が現実的です。半年〜1年の移行期間を想定するのが一般的です。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">自社サイトがない状態でも依頼できますか？</button>
+          <div class="faq-a"><p>はい、対応可能です。サイトなしの場合は、まずGoogleビジネスプロフィール（旧Googleマイビジネス）の最適化から始めるのが最短ルートです。サイト制作も対応しており、制作費用については別途お見積もりします。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">口コミを増やすにはどうすればいいですか？</button>
+          <div class="faq-a"><p>工事完了後のお客様へのフォローアップタイミング・文面・QRコードを使った導線設計など、現場に負担をかけずに口コミを集められる仕組みを設計します。レビュー依頼の代行はGoogleの規約に反するため行いませんが、自然に集まる仕組みを作ります。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">所沢・川越エリア以外でも対応できますか？</button>
+          <div class="faq-a"><p>基本的にはオンラインで全国対応可能です。ヒアリング・レポート共有・月次報告はオンラインで行います。対面ご希望の場合は、所沢・川越・入間・ふじみ野・朝霞・新座エリアで対応可能です。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">成果が出るまでどのくらいかかりますか？</button>
+          <div class="faq-a"><p>MEOは1〜3ヶ月で変化が見え始めるケースが多いです。SEOは3〜6ヶ月、Web広告は施策開始後すぐに流入が始まります。最低契約期間を3ヶ月に設定しているのは、施策の効果が数字に出るまでの最低ラインを確保するためです。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / CONTACT ========== -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="section-eyebrow">無料診断</div>
+      <h2 class="section-title">まずは無料診断から。<br>御社の現状を数値で見える化します。</h2>
+      <p class="section-sub">Googleマップ・自社サイト・競合との比較を診断レポートとしてお渡しします。費用ゼロ・売り込みなし。3分で申し込み完了します。</p>
+      <div class="contact-form-wrap">
+        <div class="contact-cta-box">
+          <div class="contact-cta-checks">
+            <div class="contact-cta-check">✓ 費用は一切かかりません</div>
+            <div class="contact-cta-check">✓ 売り込みは一切しません</div>
+            <div class="contact-cta-check">✓ 3分で申し込み完了</div>
+          </div>
+          <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large btn--block">
+            無料診断を申し込む →
+          </a>
+          <p class="form-note">Googleフォームが開きます。3営業日以内にレポートをお送りします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">ACCEL<span>LINK</span></div>
+      <p class="footer__address">〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F</p>
+      <p class="footer__copy">© 2026 ACCEL LINK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>

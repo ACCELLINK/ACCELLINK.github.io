@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>整体院・接骨院のWeb集客 | ACCEL LINK</title>
+  <meta name="description" content="ホットペッパー依存・新患が来ない・口コミが増えない整体院・接骨院向け。MEO・SEO・SNS運用で自前の新患集客を実現。無料診断実施中。">
+  <meta property="og:title" content="整体院・接骨院のWeb集客 | ACCEL LINK">
+  <meta property="og:description" content="ホットペッパー手数料に頼らない自前の新患集客を実現。MEO・SEO・LINE構築で安定集客の仕組みを作る。無料診断実施中。">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .breadcrumb {
+      background: var(--gray-50);
+      border-bottom: 1px solid var(--gray-200);
+      padding: 10px 0;
+    }
+    .breadcrumb__inner {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      color: var(--gray-600);
+    }
+    .breadcrumb__inner a { color: var(--gray-600); }
+    .breadcrumb__inner a:hover { color: var(--accent); }
+    .breadcrumb__sep { color: var(--gray-400); }
+
+    .industry-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,90,31,.12);
+      border: 1px solid rgba(255,90,31,.3);
+      color: #ffb89a;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 28px;
+    }
+
+    .merit-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .merit-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      border: 1px solid var(--gray-200);
+      transition: box-shadow var(--transition), transform var(--transition);
+    }
+    .merit-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-4px);
+    }
+    .merit-card__num {
+      font-size: 2.2rem;
+      font-weight: 900;
+      color: var(--accent);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .merit-card__num small {
+      font-size: 1rem;
+      font-weight: 700;
+    }
+    .merit-card h3 {
+      font-size: .9rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--gray-900);
+    }
+    .merit-card p {
+      font-size: .82rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      margin-top: 48px;
+      position: relative;
+    }
+    .step-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: calc(16.67% + 20px);
+      right: calc(16.67% + 20px);
+      height: 2px;
+      background: var(--gray-200);
+      z-index: 0;
+    }
+    .step-item {
+      text-align: center;
+      padding: 0 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .step-item__circle {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: var(--white);
+      font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      font-weight: 900;
+    }
+    .step-item h3 {
+      font-size: .95rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .step-item p {
+      font-size: .82rem;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+
+    @media (max-width: 768px) {
+      .merit-grid { grid-template-columns: 1fr; }
+      .step-grid { grid-template-columns: 1fr; gap: 32px; }
+      .step-grid::before { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="header">
+    <div class="container">
+      <a href="../index.html" class="logo">ACCEL<span>LINK</span></a>
+      <nav class="nav" id="nav">
+        <a href="#problems">課題</a>
+        <a href="#solution">解決策</a>
+        <a href="#services">サービス</a>
+        <a href="#results">実績</a>
+        <a href="#flow">流れ</a>
+        <a href="#contact" class="nav-cta">無料診断を受ける</a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="メニュー">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== BREADCRUMB ========== -->
+  <div class="breadcrumb">
+    <div class="container">
+      <div class="breadcrumb__inner">
+        <a href="../index.html">トップ</a>
+        <span class="breadcrumb__sep">›</span>
+        <span>整体院・接骨院向け</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="industry-badge">🦴 整体院・接骨院・鍼灸院 専門</div>
+      <h1 class="hero-title">
+        ホットペッパー頼みから卒業し、<br>
+        <em>自前の新患集客</em>を手に入れる。
+      </h1>
+      <p class="hero-sub">
+        掲載料を払わなくなったとたんに新患がゼロになる、という不安から解放されませんか。<br class="pc-only">
+        MEO・SEO・LINEを組み合わせ、患者さんが自分で見つけて予約してくれる仕組みを作ります。<br class="pc-only">
+        月1億円規模の広告運用実績を持つマーケターが、月3万円〜で支援します。
+      </p>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn--primary">無料診断を申し込む（費用ゼロ）</a>
+        <a href="#solution" class="btn btn--ghost">解決策を見る</a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat__num">¥1億<small>/月</small></span>
+          <span class="hero-stat__label">広告運用実績</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">50万<small>セッション×2</small></span>
+          <span class="hero-stat__label">SEOメディア運用</span>
+        </div>
+        <div class="hero-stat__divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat__num">月3万円<small>〜</small></span>
+          <span class="hero-stat__label">サポート開始価格</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bg-orb"></div>
+  </section>
+
+  <!-- ========== PROBLEMS ========== -->
+  <section class="section section--gray" id="problems">
+    <div class="container">
+      <div class="section-eyebrow">こんなお悩みはありませんか？</div>
+      <h2 class="section-title">整体院・接骨院が抱える<br>集客の本質的な課題</h2>
+      <div class="grid grid--3">
+        <div class="card card--problem">
+          <div class="card__icon">💸</div>
+          <h3>ホットペッパーの月額費用が重く、やめると怖い</h3>
+          <p>月数万円〜十数万円の掲載費を払い続けているが、やめたら新患がゼロになる恐怖で解約できない。自力集客の仕組みがない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">👣</div>
+          <h3>新患の数が安定せず、月によって大きく波がある</h3>
+          <p>繁忙期と閑散期の差が激しく、収入が安定しない。新患を安定的に獲得できる仕組みがない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">⭐</div>
+          <h3>Googleの口コミが増えない・返信できていない</h3>
+          <p>近隣競合は口コミ100件超なのに自院は10件以下。Googleマップで検索してもなかなか出てこない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">📱</div>
+          <h3>Instagramは投稿しているが新患に繋がらない</h3>
+          <p>毎日投稿しているのにフォロワーが増えず、予約にも繋がらない。何が間違っているのかわからない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">🔄</div>
+          <h3>保険診療から自費移行が進まない</h3>
+          <p>自費メニューを作ったが患者さんに認知されていない。自費比率を上げるためのWeb戦略がわからない。</p>
+        </div>
+        <div class="card card--problem">
+          <div class="card__icon">💬</div>
+          <h3>リピーター管理ができておらず、来院が途絶える</h3>
+          <p>新患は来るが定着しない。再来院を促すコミュニケーション手段がなく、LINE活用も手探り状態。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== BRIDGE ========== -->
+  <section class="bridge">
+    <div class="container">
+      <p>
+        ホットペッパーをやめる必要はありません。まず<strong>自前の集客を少しずつ育てる</strong>ことが大切です。<br>
+        Googleマップ・自社サイト・LINEを整備すれば、<strong>掲載料ゼロで患者さんが自分で見つけて予約してくれる</strong>仕組みが作れます。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========== SOLUTION ========== -->
+  <section class="section" id="solution">
+    <div class="container">
+      <div class="section-eyebrow">解決のアプローチ</div>
+      <h2 class="section-title">整体院の自前集客は<br>3つのステップで作る</h2>
+      <p class="section-sub">一度に全部やる必要はありません。効果が出やすいものから順番に積み上げていきます。</p>
+      <div class="step-grid">
+        <div class="step-item">
+          <div class="step-item__circle">01</div>
+          <h3>Googleマップで<br>地域検索に出る</h3>
+          <p>「○○市 整体」「近くの接骨院」で検索した人に最初に見つけてもらう。MEOは最速・最低コストで効果が出る施策です。</p>
+        </div>
+        <div class="step-item">
+          <div class="step-item__circle">02</div>
+          <h3>サイト・SNSで<br>信頼を作る</h3>
+          <p>Googleマップから飛んできた患者候補が「ここに来たい」と思えるサイト・InstagramのProfile設計を整えます。</p>
+        </div>
+        <div class="step-item">
+          <div class="step-item__circle">03</div>
+          <h3>LINEで<br>リピートさせる</h3>
+          <p>来院した患者さんをLINE友だちに誘導し、再来院・自費メニュー案内・口コミ依頼を自動化します。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== MERIT ========== -->
+  <section class="section section--gray">
+    <div class="container">
+      <div class="section-eyebrow">自前集客の効果</div>
+      <h2 class="section-title">MEOで集客が変わる<br>3つの数字</h2>
+      <div class="merit-grid">
+        <div class="merit-card">
+          <div class="merit-card__num">80<small>%</small></div>
+          <h3>「近くの整体」検索でのローカル枠クリック率</h3>
+          <p>Googleマップの上位3枠（ローカルパック）はオーガニック検索より目立ち、クリック率が高い。MEOはSEOより早く・安く効果が出ます。</p>
+        </div>
+        <div class="merit-card">
+          <div class="merit-card__num">3<small>倍</small></div>
+          <h3>口コミ10件→30件超で問い合わせが増える</h3>
+          <p>口コミ数が10件未満の院と30件以上の院では、Googleマップ経由の問い合わせ数に大きな差があります。口コミ獲得の仕組みが重要です。</p>
+        </div>
+        <div class="merit-card">
+          <div class="merit-card__num">0円<small>/件</small></div>
+          <h3>SEO・MEO経由の問い合わせは獲得コストゼロ</h3>
+          <p>一度仕組みを作れば、ポータルへの手数料なしで患者さんが来院します。初期構築コストはかかりますが、長期的なコストは大幅に下がります。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SERVICES ========== -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-eyebrow">サービス内容</div>
+      <h2 class="section-title">整体院・接骨院向け<br>対応施策</h2>
+      <p class="section-sub">どの施策を使うかは、無料診断・ヒアリング後に決めます。まず「何が一番効果的か」を診断します。</p>
+      <div class="grid grid--3 grid--services">
+        <div class="card card--service">
+          <div class="card__icon">🗺️</div>
+          <h3>MEO対策（Googleマップ最適化）</h3>
+          <p>「地域名＋整体・接骨院・鍼灸院」の検索でマップ上位に表示させる施策。口コミ獲得の仕組みづくり・写真最適化・投稿管理を含みます。競合との比較も数値でお見せします。</p>
+          <div class="card__tag">月3万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">🔍</div>
+          <h3>SEO対策（ホームページ検索上位）</h3>
+          <p>「地域名＋症状・施術名」などのキーワードで検索上位を狙う施策。症状別コンテンツ・施術メニューページの最適化で、悩みを持つ患者候補に刺さるサイトを作ります。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">📲</div>
+          <h3>Instagram運用改善</h3>
+          <p>投稿から予約につながる設計に変えます。プロフィール・ハイライト・投稿フォーマットを整え、フォロワーを「来院者」に変える仕組みを作ります。フォロワー数より予約数を増やします。</p>
+          <div class="card__tag">月3万円〜</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">💬</div>
+          <h3>LINE公式アカウント構築・運用</h3>
+          <p>来院後のリピート促進・自費メニュー案内・口コミ依頼をLINEで自動化。友だち登録から再来院までの流れを設計します。キャンセル対策にも有効です。</p>
+          <div class="card__tag">月3万円〜 / スポット対応</div>
+        </div>
+        <div class="card card--service">
+          <div class="card__icon">📢</div>
+          <h3>Web広告運用（Google・Meta）</h3>
+          <p>「今すぐ施術を受けたい」という検索意図の高い見込み客にリーチ。新規開院・新メニュー立ち上げ・キャンペーン時など、速攻で集患したいタイミングに有効です。</p>
+          <div class="card__tag">月5万円〜</div>
+        </div>
+        <div class="card card--service card--service-free">
+          <div class="card__icon">🎁</div>
+          <h3>無料Web診断レポート</h3>
+          <p>現状のサイト・Googleマップ・SNS・競合との比較を診断レポートとしてお渡しします。「何から手をつけるべきか」が明確になります。費用は一切かかりません。</p>
+          <div class="card__tag card__tag--free">完全無料</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESULTS ========== -->
+  <section class="section section--dark" id="results">
+    <div class="container">
+      <div class="section-eyebrow section-eyebrow--light">なぜACCEL LINKに頼むのか</div>
+      <h2 class="section-title section-title--light">大手企業で証明した実績を<br>整体院・接骨院の集客に</h2>
+      <div class="grid grid--3">
+        <div class="card card--result">
+          <div class="card__result-num">¥1億<span>/月</span></div>
+          <h3>広告費の運用実績</h3>
+          <p>上場企業にて月額1億円規模の広告費を担当。Google・Meta等複数プラットフォームを横断的に運用。地域ビジネス向けに応用します。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">50万<span>セッション×2</span></div>
+          <h3>SEOメディア運用実績</h3>
+          <p>月間50万セッション超のオウンドメディアを2媒体同時に運用。「症状名＋地域」などのSEO設計を整体院向けに活用します。</p>
+        </div>
+        <div class="card card--result">
+          <div class="card__result-num">¥6,000万<span>/月</span></div>
+          <h3>SEO収益化実績</h3>
+          <p>SEOで集めたトラフィックを月6,000万円超の収益に転換。「流入を予約に変える」LPやサイト設計のノウハウを持っています。</p>
+        </div>
+      </div>
+      <div class="results-note">
+        <strong>院長業・施術に集中してください。</strong><br>
+        デジタル集客の設計・運用はACCEL LINKに任せてもらえれば、現場の負担ゼロで仕組みが育ちます。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FLOW ========== -->
+  <section class="section section--gray" id="flow">
+    <div class="container">
+      <div class="section-eyebrow">支援の流れ</div>
+      <h2 class="section-title">診断から施策開始まで<br>最短1週間</h2>
+      <div class="flow-list">
+        <div class="flow-item">
+          <div class="flow-item__num">01</div>
+          <div class="flow-item__body">
+            <h3>無料診断レポートを受け取る</h3>
+            <p>フォームからご連絡いただくと、3営業日以内に現状のGoogleマップ・サイト・競合比較をまとめた診断レポートをお送りします。費用ゼロ・売り込みなし。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">02</div>
+          <div class="flow-item__body">
+            <h3>無料ヒアリング（オンライン or 対面）</h3>
+            <p>現状の集患状況・予算感・目標新患数をヒアリングします。30〜60分程度。ホットペッパーの費用感やSNSの現状も共有いただけると、より精度の高い提案ができます。</p>
+          </div>
+        </div>
+        <div class="flow-item">
+          <div class="flow-item__num">03</div>
+          <div class="flow-item__body">
+            <h3>施策プランの提案</h3>
+            <p>予算に合わせて「まず何をやるべきか」を1〜2本に絞って提案します。ホットペッパーとの費用比較も含めてお伝えします。</p>
+          </div>
+        </div>
+        <div class="flow-item flow-item--last">
+          <div class="flow-item__num">04</div>
+          <div class="flow-item__body">
+            <h3>契約・施策スタート</h3>
+            <p>最短1週間で施策を開始。月次レポートで数字の変化を共有しながら改善を続けます。最低契約期間は3ヶ月。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRICING ========== -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-eyebrow">料金目安</div>
+      <h2 class="section-title">まず予算を教えてください。<br>その予算内で最善を提案します。</h2>
+      <p class="section-sub">固定プランはありません。無料診断・面談後にヒアリングして、予算に合わせたサポート内容を一緒に決めます。</p>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 3〜5万円</div>
+          <div class="pricing-card__target">まずMEOで新患を増やしたい</div>
+          <p class="pricing-card__example">例）Googleマップの最適化・口コミ獲得の仕組みづくりに集中。ホットペッパー費用の一部を振り替えてスタートできます。</p>
+        </div>
+        <div class="pricing-card pricing-card--popular">
+          <div class="pricing-card__badge">相談が多い予算帯</div>
+          <div class="pricing-card__range">月 5〜8万円</div>
+          <div class="pricing-card__target">MEO＋Instagram＋LINEを整備</div>
+          <p class="pricing-card__example">例）MEO・Instagram改善・LINE構築をセットで。新患獲得からリピート促進まで一貫した仕組みを作ります。</p>
+        </div>
+        <div class="pricing-card">
+          <div class="pricing-card__range">月 10万円〜</div>
+          <div class="pricing-card__target">広告×SEO×SNSを本格展開</div>
+          <p class="pricing-card__example">例）Google広告で即効性を確保しながら、SEO・MEOで中長期の自前集客基盤を同時に構築します。</p>
+        </div>
+      </div>
+      <div class="pricing-note">
+        <ul>
+          <li>具体的なサポート内容・料金は無料診断・面談後にご提案します</li>
+          <li>広告費はクライアント負担（サポート料金に含まれません）</li>
+          <li>最低契約期間：3ヶ月〜</li>
+          <li>まずは<strong>無料診断</strong>から。費用は一切かかりません。</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FAQ ========== -->
+  <section class="section section--gray" id="faq">
+    <div class="container">
+      <div class="section-eyebrow">よくある質問</div>
+      <h2 class="section-title">FAQ</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-q">ホットペッパーを解約しなくても依頼できますか？</button>
+          <div class="faq-a"><p>はい、解約する必要はありません。まずACCEL LINKのサポートで自前集客を少しずつ育て、MEO経由の問い合わせが安定してきた段階でホットペッパーの比率を下げていく、という順番が現実的です。解約を強要することは一切しません。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">整体院のInstagramはどう改善すれば集客に繋がりますか？</button>
+          <div class="faq-a"><p>「フォロワーを増やす」ことより「プロフィールから予約につなげる動線を作る」ことが重要です。プロフィール文・ハイライト・予約リンクの設置・投稿の見せ方を改善するだけで、今のフォロワーからも予約が入るようになります。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">口コミをお願いするのは気が引けます。</button>
+          <div class="faq-a"><p>「口コミを書いてください」と直接お願いするのではなく、来院後のLINEフォローのタイミングで自然に導線を作る方法があります。強引なお願いではなく、患者さんが「書きたい」と思えるような体験設計が大切です。具体的な方法は診断後にお伝えします。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">保険診療がメインでも自費移行のサポートはできますか？</button>
+          <div class="faq-a"><p>はい、対応可能です。Webからの集患を「自費メニューに興味がある患者さん」に絞るキーワード設計や、自費メニューの認知を上げるコンテンツ制作など、Web戦略から自費比率向上をサポートします。</p></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q">ITやデジタルに詳しくなくても大丈夫ですか？</button>
+          <div class="faq-a"><p>はい、問題ありません。「デジタルは苦手だが集客を改善したい」という先生が主なターゲットです。専門用語を使わず、何をなぜやるのかをわかりやすく説明しながら進めます。現場の負担が最小限になるように設計します。</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / CONTACT ========== -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="section-eyebrow">無料診断</div>
+      <h2 class="section-title">まずは無料診断から。<br>御院の現状を数値で見える化します。</h2>
+      <p class="section-sub">Googleマップ・サイト・SNS・競合との比較を診断レポートとしてお渡しします。費用ゼロ・売り込みなし。3分で申し込み完了します。</p>
+      <div class="contact-form-wrap">
+        <div class="contact-cta-box">
+          <div class="contact-cta-checks">
+            <div class="contact-cta-check">✓ 費用は一切かかりません</div>
+            <div class="contact-cta-check">✓ 売り込みは一切しません</div>
+            <div class="contact-cta-check">✓ 3分で申し込み完了</div>
+          </div>
+          <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large btn--block">
+            無料診断を申し込む →
+          </a>
+          <p class="form-note">Googleフォームが開きます。3営業日以内にレポートをお送りします。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">ACCEL<span>LINK</span></div>
+      <p class="footer__address">〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F</p>
+      <p class="footer__copy">© 2026 ACCEL LINK. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../script.js"></script>
+</body>
+</html>
