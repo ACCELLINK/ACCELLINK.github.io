@@ -310,8 +310,8 @@ a { text-decoration: none; }
   line-height: 1;
 }
 .card__icon svg {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--accent);
 }
 .card--problem h3 {
@@ -383,33 +383,13 @@ a { text-decoration: none; }
   border-color: #FFD4C0;
 }
 .service-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: 12px;
-  background: linear-gradient(135deg, rgba(10,37,64,.10) 0%, rgba(10,37,64,.05) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 16px;
-  transition: background var(--transition);
-  flex-shrink: 0;
+  font-size: 2rem;
+  margin-bottom: 14px;
+  line-height: 1;
 }
 .service-icon svg {
-  width: 26px;
-  height: 26px;
-  color: var(--primary);
-  transition: color var(--transition);
-}
-.card--service:hover .service-icon {
-  background: linear-gradient(135deg, rgba(255,90,31,.15) 0%, rgba(255,90,31,.06) 100%);
-}
-.card--service:hover .service-icon svg {
-  color: var(--accent);
-}
-.card--service-free .service-icon {
-  background: linear-gradient(135deg, rgba(255,90,31,.18) 0%, rgba(255,90,31,.08) 100%);
-}
-.card--service-free .service-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
   color: var(--accent);
 }
 .card--service h3 {
