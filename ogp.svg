@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0A2540"/>
+
+  <!-- Accent bar left -->
+  <rect x="0" y="0" width="8" height="630" fill="#FF5A1F"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="80" r="200" fill="#1a3a5c" opacity="0.5"/>
+  <circle cx="1050" cy="550" r="120" fill="#1a3a5c" opacity="0.4"/>
+  <circle cx="100" cy="500" r="150" fill="#1a3a5c" opacity="0.3"/>
+
+  <!-- Logo: ACCEL LINK -->
+  <text x="600" y="260" font-family="Arial, Helvetica, sans-serif" font-size="96" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="6">ACCEL<tspan fill="#FF5A1F">LINK</tspan></text>
+
+  <!-- Divider -->
+  <rect x="480" y="295" width="240" height="3" fill="#FF5A1F" rx="2"/>
+
+  <!-- Tagline -->
+  <text x="600" y="370" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="500" fill="#FFFFFF" text-anchor="middle" opacity="0.9">地域ビジネス専門のWeb集客コンサルタント</text>
+
+  <!-- Sub text -->
+  <text x="600" y="430" font-family="Arial, Helvetica, sans-serif" font-size="22" fill="#FFFFFF" text-anchor="middle" opacity="0.6">SEO / MEO / Web広告 — 月3万円〜</text>
+
+  <!-- URL -->
+  <text x="600" y="560" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#FF5A1F" text-anchor="middle" opacity="0.8">accellink.github.io</text>
+</svg>
