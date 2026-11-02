@@ -3,429 +3,316 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACCEL LINK | 地域ビジネス専門のWeb集客コンサルタント</title>
-  <meta name="description" content="月1億円の広告運用・月50万セッションのSEOメディア運用実績。整体院・サロン・クリニックなど地域ビジネスの集客をトータルサポート。月3万円〜、予算に合わせたプランでお気軽にご相談ください。">
-  <meta property="og:title" content="ACCEL LINK | 地域ビジネス専門のWeb集客コンサルタント">
-  <meta property="og:description" content="月1億円の広告運用・月50万セッションのSEOメディア運用実績。整体院・サロン・クリニックなど地域ビジネスの集客をトータルサポート。">
+  <title>ACCEL LINK | 地域ビジネスのWeb集客・制作・AI活用</title>
+  <meta name="description" content="整体院・サロン・クリニック・建築業など地域ビジネスの集客を、MEO・SEO・広告運用からHP/LP制作、AIO・LLMO対策、システム開発まで代表が一貫して支援。月1億円規模の広告運用実績。月3万円〜、まずは無料診断から。">
+  <meta property="og:title" content="ACCEL LINK | 地域ビジネスのWeb集客・制作・AI活用">
+  <meta property="og:description" content="MEO・SEO・広告運用からHP/LP制作、AIO・LLMO対策、システム開発まで。地域ビジネスの集客を代表が一貫して支援します。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://accellink.github.io">
-  <meta property="og:image" content="https://accellink.github.io/ogp.svg">
+  <meta property="og:image" content="https://accellink.github.io/ogp.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="ACCEL LINK">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="https://accellink.github.io/ogp.svg">
+  <meta name="twitter:image" content="https://accellink.github.io/ogp.png">
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="apple-touch-icon" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="top.css?v=20261103k">
+  <!-- アクセス解析（GA4 / Microsoft Clarity）: IDを入れると有効になる。空のままなら何も読み込まない -->
+  <script>
+    (function () {
+      var GA4_ID = "";      // 例: G-XXXXXXXXXX
+      var CLARITY_ID = "";  // 例: abcd1234ef
+      if (GA4_ID) {
+        var s = document.createElement("script");
+        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA4_ID;
+        document.head.appendChild(s);
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag("js", new Date()); gtag("config", GA4_ID);
+        // 問い合わせフォームへのクリックを計測
+        document.addEventListener("click", function (e) {
+          var a = e.target.closest && e.target.closest('a[href*="forms.gle"]');
+          if (a) gtag("event", "form_click", { link_text: a.textContent.trim() });
+        });
+      }
+      if (CLARITY_ID) {
+        (function (c, l, a, r, i, t, y) {
+          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
+          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", CLARITY_ID);
+      }
+    })();
+  </script>
 </head>
 <body>
 
   <!-- ========== HEADER ========== -->
-  <header class="header">
-    <div class="container">
-      <a href="#" class="logo">ACCEL<span>LINK</span></a>
-      <nav class="nav" id="nav">
-        <a href="#problems">お悩み</a>
-        <a href="#services">サービス</a>
-        <a href="#results">実績</a>
-        <a href="#flow">流れ</a>
-        <a href="#profile">プロフィール</a>
-        <a href="#contact" class="nav-cta">無料相談</a>
-      </nav>
-      <button class="hamburger" id="hamburger" aria-label="メニュー">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
+  <header class="header" id="header">
+    <a href="#" class="logo" aria-label="ACCEL LINK トップへ">
+      <span class="logo__main">ACCEL<span>LINK</span></span>
+      <span class="logo__sub">地域ビジネスのWeb集客</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="メインメニュー">
+      <a href="#service">サービス</a>
+      <a href="#reason">選ばれる理由</a>
+      <a href="#price">料金</a>
+      <a href="#profile">代表について</a>
+      <a href="#faq">よくある質問</a>
+      <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="nav__cta">無料診断を申し込む<i class="arrow" aria-hidden="true"></i></a>
+    </nav>
+    <button class="menu-btn" id="hamburger" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
+
+  <main>
 
   <!-- ========== HERO ========== -->
   <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-badge">地域ビジネス専門 / Web集客コンサルタント</div>
-      <h1 class="hero-title">
-        ポータル依存から脱却し、<br>
-        <em>自前の集客</em>を手に入れる。
-      </h1>
-      <p class="hero-sub">
-        月1億円規模の広告運用・月50万セッションのSEOメディア2媒体運用の実績を持つマーケターが、<br class="pc-only">
-        整体院・サロン・クリニックなどの地域ビジネスに使いやすい価格で提供します。
-      </p>
-      <div class="hero-cta">
-        <a href="#contact" class="btn btn--primary">まずは無料診断を受ける</a>
-        <a href="#flow" class="btn btn--ghost">支援の流れを見る</a>
-      </div>
-      <div class="hero-stats">
-        <div class="hero-stat">
-          <span class="hero-stat__num">¥1億<small>/月</small></span>
-          <span class="hero-stat__label">広告運用実績</span>
-        </div>
-        <div class="hero-stat__divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat__num">50万<small>セッション×2</small></span>
-          <span class="hero-stat__label">SEOメディア運用</span>
-        </div>
-        <div class="hero-stat__divider"></div>
-        <div class="hero-stat">
-          <span class="hero-stat__num">¥6,000万<small>/月</small></span>
-          <span class="hero-stat__label">アフィリエイト収益</span>
-        </div>
-      </div>
-    </div>
-    <div class="hero-bg-orb"></div>
-  </section>
+    <svg class="hero__bands" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+      <path class="b-light" d="M-40,900 C240,820 520,800 780,760 C1010,724 1130,640 1230,500 C1300,400 1370,330 1480,290 L1480,380 C1400,410 1350,470 1310,560 C1230,740 1080,820 900,860 C760,890 640,900 560,900 Z"/>
+      <path class="b-navy" d="M-40,770 C180,700 380,690 560,700 C760,712 930,690 1070,590 C1180,510 1250,380 1330,300 C1380,250 1430,220 1480,205 L1480,250 C1420,275 1370,320 1320,390 C1240,500 1170,640 1040,710 C900,786 740,778 560,772 C360,766 170,800 -40,880 Z"/>
+      <path class="b-white" d="M820,690 C960,650 1060,560 1150,450 C1240,340 1330,250 1480,180 L1480,196 C1350,260 1270,345 1185,450 C1090,570 990,660 820,690 Z"/>
+    </svg>
 
-  <!-- ========== PROBLEMS ========== -->
-  <section class="section section--gray" id="problems">
-    <div class="container">
-      <div class="section-eyebrow">こんなお悩みはありませんか？</div>
-      <h2 class="section-title">多くの地域ビジネスが<br>抱える集客の課題</h2>
-      <div class="grid grid--3">
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg></div>
-          <h3>ホットペッパー・食べログ頼みで手数料が重い</h3>
-          <p>毎月の掲載費が高く、やめると客足が途絶えるという悪循環から抜け出せない。</p>
-        </div>
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>Googleマップの口コミが増えない</h3>
-          <p>近くにいる見込み客に見つけてもらえず、MEO対策のやり方がわからない。</p>
-        </div>
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <h3>Instagramは投稿しているが集客に繋がらない</h3>
-          <p>毎日投稿しているのに予約には繋がらない。何が間違っているのかわからない。</p>
-        </div>
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9.5V21m0-11.5L6 3m6 6.5L18 3"/><path d="M6 15h12"/><path d="M6 11h12"/></svg></div>
-          <h3>大手コンサルは高いのに成果が出ない</h3>
-          <p>月数十万払っているのに担当が変わるたびに最初からやり直しで成果が見えない。</p>
-        </div>
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-          <h3>自分でやろうとしても時間がなく続かない</h3>
-          <p>本業の施術・接客で手一杯。マーケティングまで手が回らない。</p>
-        </div>
-        <div class="card card--problem">
-          <div class="card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
-          <h3>何から手をつければいいかわからない</h3>
-          <p>SEO・広告・SNS・MEOと情報が多すぎて、自分の店に何が合うのか判断できない。</p>
+    <div class="hero__inner">
+      <div class="hero__copy" data-reveal>
+        <p class="hero__label"><span class="en">ACCEL LINK</span>地域ビジネス専門のWebマーケティング</p>
+        <h1 class="hero__title">近くのお客様に、<br>ちゃんと<em>見つかる</em><br>お店へ。</h1>
+        <p class="hero__text">Googleマップ、検索、SNS、そしてAI。<br>お客様がお店を探すすべての場所で、選ばれる準備を整えます。</p>
+        <div class="hero__btns">
+          <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--dark">無料で集客診断を受ける<i class="arrow arrow--accent" aria-hidden="true"></i></a>
         </div>
       </div>
+      <aside class="numbers" aria-label="代表の実績" data-reveal>
+        <p class="numbers__note">代表がこれまでに担当してきた規模</p>
+        <dl class="numbers__list">
+          <div><dt>上場企業での広告運用</dt><dd><span class="num en">1</span><span class="unit">億円</span><small>/月</small></dd></div>
+          <div><dt>運用したSEOメディア</dt><dd><span class="num en">50</span><span class="unit">万</span><small>セッション/月 ×2媒体</small></dd></div>
+          <div><dt>SEO流入からの収益化</dt><dd><span class="num en">6,000</span><span class="unit">万円</span><small>/月</small></dd></div>
+        </dl>
+        <p class="numbers__career">東証プライム上場の商社・大手PR会社で実務を経験</p>
+      </aside>
     </div>
   </section>
 
-  <!-- ========== INDUSTRIES ========== -->
-  <section class="section section--gray" id="industries">
-    <div class="container">
-      <div class="section-eyebrow">対応業界</div>
-      <h2 class="section-title">業界の課題を深く知っているから、<br>的外れな提案をしない。</h2>
-      <p class="section-sub">「地域ビジネスのWeb集客」といっても、業界によって課題もポータルへの依存度も全く違います。<br>あなたの業界に特化したページで、具体的な解決策を確認してください。</p>
-      <div class="industry-cards">
-        <div class="industry-card industry-card--seitai">
-          <div class="industry-card__inner">
-            <div class="industry-card__name">整体院・接骨院・鍼灸院</div>
-            <div class="industry-card__pain">「ポータル掲載をやめると新患がゼロになる不安がある」</div>
-            <ul class="industry-card__points">
-              <li>Googleマップで競合院より口コミ数が少ない</li>
-              <li>InstagramのフォロワーはいるがSNSが予約に繋がらない</li>
-              <li>来院後のリピート促進の仕組みがない</li>
-            </ul>
-            <div class="industry-card__cta">整体院・接骨院ページを見る →</div>
-          </div>
-          <a href="seitai/index.html" class="industry-card__link" aria-label="整体院・接骨院向けページへ"></a>
-        </div>
-        <div class="industry-card industry-card--salon">
-          <div class="industry-card__inner">
-            <div class="industry-card__name">美容室・エステ・ネイル・まつエク</div>
-            <div class="industry-card__pain">「ホットペッパービューティーの手数料で利益が出ない」</div>
-            <ul class="industry-card__points">
-              <li>Instagramの投稿が予約に結びついていない</li>
-              <li>新規は来るがリピーターが定着しない</li>
-              <li>当日の空き枠をうまく埋められない</li>
-            </ul>
-            <div class="industry-card__cta">美容サロン・エステページを見る →</div>
-          </div>
-          <a href="salon/index.html" class="industry-card__link" aria-label="美容サロン向けページへ"></a>
-        </div>
-        <div class="industry-card industry-card--clinic">
-          <div class="industry-card__inner">
-            <div class="industry-card__name">クリニック・歯科医院</div>
-            <div class="industry-card__pain">「競合に口コミ数で負け、地域検索の順位が低い」</div>
-            <ul class="industry-card__points">
-              <li>Googleの口コミが少なく返信もできていない</li>
-              <li>自由診療メニューが地域住民に認知されていない</li>
-              <li>医療広告ガイドラインが怖くてWeb活用できない</li>
-            </ul>
-            <div class="industry-card__cta">クリニック・歯科医院ページを見る →</div>
-          </div>
-          <a href="clinic/index.html" class="industry-card__link" aria-label="クリニック・歯科向けページへ"></a>
-        </div>
-        <div class="industry-card industry-card--construction">
-          <div class="industry-card__inner">
-            <div class="industry-card__name">建築・外壁塗装・屋根修理・リフォーム</div>
-            <div class="industry-card__pain">「ポータルサイトへの手数料で薄利になっている」</div>
-            <ul class="industry-card__points">
-              <li>自社サイトが古い、またはそもそも存在しない</li>
-              <li>地域名＋業種の検索で競合に負けている</li>
-              <li>閑散期の問い合わせが激減する</li>
-            </ul>
-            <div class="industry-card__cta">建築・リフォームページを見る →</div>
-          </div>
-          <a href="construction/index.html" class="industry-card__link" aria-label="建築・リフォーム向けページへ"></a>
-        </div>
+  <!-- ========== ISSUE ========== -->
+  <section class="sec sec--white" id="issue">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Issue</p>
+        <p class="head__ja">お悩み</p>
+        <h2 class="head__title">こんなことで、止まっていませんか。</h2>
+      </header>
+      <ul class="cards cards--3">
+        <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/wallet.svg)"></i></span><h3>ポータルの手数料が重い</h3><p>やめたら客足が止まりそうで、払い続けている。</p></li>
+        <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/map.svg)"></i></span><h3>Googleマップで見つからない</h3><p>口コミが増えず、近所の競合に負けている。</p></li>
+        <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/question.svg)"></i></span><h3>何から手をつければいいか分からない</h3><p>SNS、HP、AI検索…やることが多すぎて決められない。</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========== SERVICE ========== -->
+  <section class="sec" id="service">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Service</p>
+        <p class="head__ja">サービス</p>
+        <h2 class="head__title">集客から制作・仕組み化まで、まとめてお任せ。</h2>
+      </header>
+      <div class="cards cards--4">
+        <article class="card card--white" data-reveal>
+          <span class="ic-badge"><i class="ic" style="--ic:url(images/icons/megaphone.svg)"></i></span>
+          <h3>集める</h3>
+          <p>見つけてもらい、来店につなげる</p>
+          <ul class="chips"><li>MEO対策</li><li>SEO対策</li><li>Web広告</li><li>SNS運用</li></ul>
+        </article>
+        <article class="card card--white" data-reveal>
+          <span class="ic-badge"><i class="ic" style="--ic:url(images/icons/ai.png)"></i></span>
+          <h3>AIに選ばれる</h3>
+          <p>ChatGPTなどAI検索への対策</p>
+          <ul class="chips"><li>AIO・LLMO対策</li><li>AI活用サポート</li></ul>
+        </article>
+        <article class="card card--white" data-reveal>
+          <span class="ic-badge"><i class="ic" style="--ic:url(images/icons/pen.svg)"></i></span>
+          <h3>つくる</h3>
+          <p>集めた人を逃さない受け皿</p>
+          <ul class="chips"><li>HP制作</li><li>LP制作</li><li>動画編集</li></ul>
+        </article>
+        <article class="card card--white" data-reveal>
+          <span class="ic-badge"><i class="ic" style="--ic:url(images/icons/gears.svg)"></i></span>
+          <h3>仕組みにする</h3>
+          <p>リピートを増やし、手間を減らす</p>
+          <ul class="chips"><li>LINE構築</li><li>システム開発</li><li>アクセス解析</li></ul>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- ========== BRIDGE ========== -->
-  <section class="bridge">
-    <div class="container">
-      <p>ACCEL LINKは、<strong>あなたの予算に合わせて</strong>最大の効果が出る施策を1〜2本に絞って提案します。<br>「全部やる」ではなく「<strong>効くものだけやる</strong>」。それが1人でも続く集客の仕組みです。</p>
+  <!-- ========== REASON ========== -->
+  <section class="sec sec--white" id="reason">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Why us</p>
+        <p class="head__ja">選ばれる理由</p>
+        <h2 class="head__title">ACCEL LINKに頼む、3つの理由。</h2>
+      </header>
+      <ol class="cards cards--3">
+        <li class="card" data-reveal><p class="card__no en">01</p><h3>大手と同じ水準のノウハウ</h3><p>月1億円規模の広告運用で培った設計を、お店の規模に合わせて使います。</p></li>
+        <li class="card" data-reveal><p class="card__no en">02</p><h3>窓口がひとつ</h3><p>広告・制作・システムをバラバラに頼む必要はありません。</p></li>
+        <li class="card" data-reveal><p class="card__no en">03</p><h3>担当が変わらない</h3><p>最初から最後まで代表が直接担当し、改善を速く回します。</p></li>
+      </ol>
     </div>
   </section>
 
-  <!-- ========== SERVICES ========== -->
-  <section class="section" id="services">
-    <div class="container">
-      <div class="section-eyebrow">サービス内容</div>
-      <h2 class="section-title">対応できる施策</h2>
-      <p class="section-sub">どの施策を使うかは、ヒアリング後に予算と課題に合わせて決めます。</p>
-      <div class="grid grid--3 grid--services">
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <h3>MEO対策</h3>
-          <p>Googleマップへの最適化。近くで検索している見込み客に確実に見つけてもらう仕組みを作ります。</p>
-          <div class="card__tag">月3万円〜</div>
-        </div>
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <h3>SEO対策</h3>
-          <p>ホームページを検索上位に表示させる施策。「地域名＋業種」でNo.1を目指します。</p>
-          <div class="card__tag">月5万円〜</div>
-        </div>
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg></div>
-          <h3>SNS運用改善</h3>
-          <p>Instagram・Xの投稿を集客につなげる設計に変えます。フォロワー数より予約数を増やします。</p>
-          <div class="card__tag">月3万円〜</div>
-        </div>
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div>
-          <h3>Web広告運用</h3>
-          <p>Google・Meta広告の設計から運用まで。少ない予算で最大の費用対効果を追います。</p>
-          <div class="card__tag">月5万円〜</div>
-        </div>
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 21 1.9-5.7a8.5 8.5 0 1 1 3.8 3.8z"/></svg></div>
-          <h3>LINE公式アカウント構築・運用</h3>
-          <p>友だち登録から予約・リピート促進まで設計。お客様との継続的な接点を作り、来店・購買につなげます。</p>
-          <div class="card__tag">月3万円〜 / スポット対応</div>
-        </div>
-        <div class="card card--service">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m22 8-6 4 6 4V8z"/><rect x="2" y="8" width="14" height="8" rx="2" ry="2"/></svg></div>
-          <h3>動画編集・制作</h3>
-          <p>SNS・LP用の動画編集に対応。リールやYouTubeショートで認知拡大を加速します。</p>
-          <div class="card__tag">スポット対応</div>
-        </div>
-        <div class="card card--service card--service-free">
-          <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
-          <h3>無料診断レポート</h3>
-          <p>現状のサイト・SNS・MEOを診断し、何から手をつけるべきかをレポートでお伝えします。費用は一切かかりません。</p>
-          <div class="card__tag card__tag--free">完全無料</div>
-        </div>
+  <!-- ========== INDUSTRY ========== -->
+  <section class="sec" id="industry">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Industry</p>
+        <p class="head__ja">対応業界</p>
+        <h2 class="head__title">業界別のページで、詳しくご紹介しています。</h2>
+      </header>
+      <div class="cards cards--4">
+        <a href="seitai/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/seitai.svg)"></i><h3>整体院・接骨院・鍼灸院</h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
+        <a href="salon/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/salon.svg)"></i><h3>美容室・エステ・ネイル</h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
+        <a href="clinic/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/clinic.svg)"></i><h3>クリニック・歯科医院</h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
+        <a href="construction/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/house.svg)"></i><h3>建築・外壁塗装・リフォーム</h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
       </div>
     </div>
   </section>
 
-  <!-- ========== RESULTS ========== -->
-  <section class="section section--dark" id="results">
-    <div class="container">
-      <div class="section-eyebrow section-eyebrow--light">なぜACCEL LINKに頼むのか</div>
-      <h2 class="section-title section-title--light">大手企業で証明した実績を<br>地域ビジネスに</h2>
-      <div class="grid grid--3">
-        <div class="card card--result">
-          <div class="card__result-num">¥1億<span>/月</span></div>
-          <h3>広告費の運用実績</h3>
-          <p>上場企業にて月額1億円規模の広告費を担当。Google・Meta等複数プラットフォームを横断的に運用し、投資対効果を最大化してきました。</p>
+  <!-- ========== PRICE ========== -->
+  <section class="sec sec--white" id="price">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Price</p>
+        <p class="head__ja">料金の目安</p>
+        <h2 class="head__title">予算に合わせて、効く施策だけを。</h2>
+      </header>
+      <div class="cards cards--3">
+        <div class="card price" data-reveal>
+          <p class="price__target">まず1つ改善したい</p>
+          <p class="price__val">月<span class="en">3〜5</span>万円</p>
         </div>
-        <div class="card card--result">
-          <div class="card__result-num">50万<span>セッション×2</span></div>
-          <h3>SEOメディア運用実績</h3>
-          <p>月間50万セッション超のオウンドメディアを2媒体同時に運用。検索上位を取り続けるSEO設計力を持っています。</p>
+        <div class="card price price--pop" data-reveal>
+          <p class="price__badge">ご相談が多い予算帯</p>
+          <p class="price__target">本格的に集客を改善したい</p>
+          <p class="price__val">月<span class="en">5〜8</span>万円</p>
         </div>
-        <div class="card card--result">
-          <div class="card__result-num">¥6,000万<span>/月</span></div>
-          <h3>SEO収益化実績</h3>
-          <p>SEOで集めたトラフィックを月6,000万円超のアフィリエイト収益に転換。「流入を売上に変える」設計のプロです。</p>
+        <div class="card price" data-reveal>
+          <p class="price__target">複数の施策を同時に動かしたい</p>
+          <p class="price__val">月<span class="en">10</span>万円〜</p>
         </div>
       </div>
-      <div class="results-note">
-        <strong>フリーランスの大多数が経験しないスケールの実績。</strong><br>
-        そのノウハウを、月3〜10万円という使いやすい価格で提供します。
-      </div>
+      <p class="notes">※ 月額の運用支援の目安です。制作・開発はお見積り。広告費は別途。最低契約期間は3ヶ月です。</p>
     </div>
   </section>
 
   <!-- ========== FLOW ========== -->
-  <section class="section section--gray" id="flow">
-    <div class="container">
-      <div class="section-eyebrow">支援の流れ</div>
-      <h2 class="section-title">相談から開始まで、<br>最短1週間</h2>
-      <div class="flow-list">
-        <div class="flow-item">
-          <div class="flow-item__num">01</div>
-          <div class="flow-item__body">
-            <h3>無料相談・ヒアリング</h3>
-            <p>現状の課題・予算感をヒアリングします。売り込みは一切しません。オンライン・対面どちらも対応。</p>
-          </div>
-        </div>
-        <div class="flow-item">
-          <div class="flow-item__num">02</div>
-          <div class="flow-item__body">
-            <h3>無料診断レポート提出</h3>
-            <p>サイト・SNS・MEOを診断し、何から手をつけるべきかをレポートでお渡しします。費用ゼロ。</p>
-          </div>
-        </div>
-        <div class="flow-item">
-          <div class="flow-item__num">03</div>
-          <div class="flow-item__body">
-            <h3>提案・スコープ確認</h3>
-            <p>予算に合わせた施策プランを提案します。「何をやって、何はやらないか」を明示します。</p>
-          </div>
-        </div>
-        <div class="flow-item flow-item--last">
-          <div class="flow-item__num">04</div>
-          <div class="flow-item__body">
-            <h3>契約・スタート</h3>
-            <p>最短1週間で施策を開始。月次レポートで進捗を共有しながら改善を続けます。</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== PRICING ========== -->
-  <section class="section" id="pricing">
-    <div class="container">
-      <div class="section-eyebrow">料金</div>
-      <h2 class="section-title">まず予算を教えてください。<br>その予算内で最善を提案します。</h2>
-      <p class="section-sub">固定プランはありません。無料診断・面談でお悩みをヒアリングしたうえで、予算に合わせたサポート内容を一緒に決めます。以下はあくまで目安です。</p>
-      <div class="pricing-grid">
-        <div class="pricing-card">
-          <div class="pricing-card__range">月 3〜5万円</div>
-          <div class="pricing-card__target">まず1つ改善したい方</div>
-          <p class="pricing-card__example">例）MEO対策・SNS運用の改善など、最も効果が出やすい施策を1本に絞ってサポート。</p>
-        </div>
-        <div class="pricing-card pricing-card--popular">
-          <div class="pricing-card__badge">ご相談が多い予算帯</div>
-          <div class="pricing-card__range">月 5〜8万円</div>
-          <div class="pricing-card__target">本格的に集客を改善したい方</div>
-          <p class="pricing-card__example">例）MEO・SNS・Webサイト改善など、複数の施策を組み合わせてサポート。</p>
-        </div>
-        <div class="pricing-card">
-          <div class="pricing-card__range">月 10万円〜</div>
-          <div class="pricing-card__target">複数施策を同時に動かしたい方</div>
-          <p class="pricing-card__example">例）広告運用・SEO・動画制作など、幅広い施策をまとめてお任せいただけます。</p>
-        </div>
-      </div>
-      <div class="pricing-note">
-        <ul>
-          <li>具体的なサポート内容・料金は無料診断・面談後にご提案します</li>
-          <li>広告費はクライアント負担（サポート料金に含まれません）</li>
-          <li>最低契約期間：3ヶ月〜（成果が出るまでの最低ライン）</li>
-          <li>まずは<strong>無料診断</strong>から。費用は一切かかりません。</li>
-        </ul>
-      </div>
+  <section class="sec" id="flow">
+    <div class="wrap">
+      <header class="head">
+        <p class="head__en en">Flow</p>
+        <p class="head__ja">ご相談の流れ</p>
+        <h2 class="head__title">相談から、最短1週間で動き出せます。</h2>
+      </header>
+      <ol class="cards cards--4">
+        <li class="card card--white" data-reveal><p class="card__no en">Step 01</p><h3>無料相談</h3><p>課題と予算感を伺います。</p></li>
+        <li class="card card--white" data-reveal><p class="card__no en">Step 02</p><h3>無料診断レポート</h3><p>何から手をつけるべきかをお渡しします。</p></li>
+        <li class="card card--white" data-reveal><p class="card__no en">Step 03</p><h3>ご提案</h3><p>予算に合わせたプランをご提案します。</p></li>
+        <li class="card card--white" data-reveal><p class="card__no en">Step 04</p><h3>スタート</h3><p>月次レポートで進捗を共有します。</p></li>
+      </ol>
     </div>
   </section>
 
   <!-- ========== PROFILE ========== -->
-  <section class="section section--gray" id="profile">
-    <div class="container">
-      <div class="section-eyebrow">プロフィール</div>
-      <h2 class="section-title">ACCEL LINK について</h2>
-      <div class="profile">
-        <div class="profile__body">
-          <div class="profile__name">佐藤 秀俊</div>
-          <div class="profile__title">マーケティングコンサルタント</div>
-          <p>上場企業にて、月額1億円規模の広告運用・月間50万セッションのオウンドメディア2媒体の運用・月6,000万円超のアフィリエイト収益創出を担当。</p>
-          <p>SEO・リスティング広告・SNS広告・MEO・動画編集をフルスタックで対応できる数少ないマーケターです。専門家パートナーとの連携体制により、案件規模・難易度を問わず柔軟に対応します。</p>
-          <p>AIエージェントを活用した高速な分析・提案も強みの一つ。大手に頼むより安く、担当が変わらない安心感をお届けします。</p>
-          <div class="profile__skills">
-            <span>SEO</span>
-            <span>Google広告</span>
-            <span>Yahoo!広告</span>
-            <span>Meta広告</span>
-            <span>X（Twitter）運用</span>
-            <span>MEO</span>
-            <span>Instagram運用</span>
-            <span>LINE構築・運用</span>
-            <span>動画編集</span>
-          </div>
-        </div>
+  <section class="sec sec--white" id="profile">
+    <div class="wrap profile">
+      <figure class="profile__photo" data-reveal>
+        <img src="images/portrait.jpg" alt="ACCEL LINK 代表 佐藤秀俊" width="780" height="1040" decoding="async">
+      </figure>
+      <div class="profile__body" data-reveal>
+        <p class="head__en en">Profile</p>
+        <p class="head__ja">代表プロフィール</p>
+        <p class="profile__name">佐藤 秀俊</p>
+        <p class="profile__role">ACCEL LINK 代表 / マーケティングコンサルタント</p>
+        <p class="profile__career">東証プライム上場の商社を経て、東証プライム上場の大手PR会社でマーケティング・事業開発を担当。自動車メーカーや大手証券会社など、大手クライアントの案件に従事。</p>
+        <blockquote class="profile__msg">
+          <p class="profile__quote">「全部やる」より、<em>効くことだけ</em>を、続ける。</p>
+          <p>大きな予算を扱ってきたからこそ、地域のお店にそのままの手法は持ち込みません。今の状態を一緒に見て、「何をやって、何をやらないか」を決めるところから始めます。</p>
+        </blockquote>
       </div>
     </div>
   </section>
 
   <!-- ========== FAQ ========== -->
-  <section class="section" id="faq">
-    <div class="container">
-      <div class="section-eyebrow">よくある質問</div>
-      <h2 class="section-title">FAQ</h2>
+  <section class="sec" id="faq">
+    <div class="wrap split">
+      <header class="head">
+        <p class="head__en en">FAQ</p>
+        <p class="head__ja">よくある質問</p>
+      </header>
       <div class="faq-list">
         <div class="faq-item">
-          <button class="faq-q">レスポンスはどのくらいで返ってきますか？</button>
-          <div class="faq-a"><p>通常、お問い合わせ・ご連絡には24時間以内にお返しします。緊急対応が必要な広告トラブルなどはパートナーとの連携で迅速に対応可能です。月次レポートや定例MTGはあらかじめ日程を決めて進めるため、進捗に不安を感じさせない運用を心がけています。</p></div>
+          <button class="faq-q" aria-expanded="false"><span class="en">Q</span>レスポンスはどのくらいで返ってきますか？</button>
+          <div class="faq-a"><p>通常、24時間以内にお返しします。月次レポートや定例MTGはあらかじめ日程を決めて進めます。</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">成果が出なかった場合はどうなりますか？</button>
-          <div class="faq-a"><p>成果保証はしておりません。ただし、施策の進捗・数字の変化を毎月レポートでお伝えし、効果が薄い施策はすぐ方向転換します。3ヶ月経過時点で改めて方針をすり合わせる機会を設けています。</p></div>
+          <button class="faq-q" aria-expanded="false"><span class="en">Q</span>成果が出なかった場合はどうなりますか？</button>
+          <div class="faq-a"><p>成果保証はしておりません。数字の変化を毎月お伝えし、効果が薄い施策はすぐ方向転換します。3ヶ月の時点で改めて方針をすり合わせます。</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">IT・デジタルに詳しくなくても大丈夫ですか？</button>
-          <div class="faq-a"><p>はい、問題ありません。ターゲットは「デジタルは詳しくないが集客を改善したい」事業者です。専門用語を使わず、何をなぜやるのかをわかりやすく説明しながら進めます。</p></div>
+          <button class="faq-q" aria-expanded="false"><span class="en">Q</span>IT・デジタルに詳しくなくても大丈夫ですか？</button>
+          <div class="faq-a"><p>はい、問題ありません。専門用語を使わず、何をなぜやるのかを説明しながら進めます。</p></div>
         </div>
         <div class="faq-item">
-          <button class="faq-q">途中で解約はできますか？</button>
-          <div class="faq-a"><p>最低契約期間は3ヶ月です。それ以降は前月末までにご連絡いただければ翌月末で終了できます。強引に継続を勧めることはしません。</p></div>
+          <button class="faq-q" aria-expanded="false"><span class="en">Q</span>途中で解約はできますか？</button>
+          <div class="faq-a"><p>最低契約期間は3ヶ月です。それ以降は前月末までのご連絡で、翌月末に終了できます。</p></div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ========== CTA / CONTACT ========== -->
-  <section class="section section--gray cta-section" id="contact">
-    <div class="container">
-      <div class="section-eyebrow">お問い合わせ</div>
-      <h2 class="section-title">まずは無料診断から。<br>費用は一切かかりません。</h2>
-      <p class="section-sub">現状のサイト・SNS・MEOを診断して、何から手をつけるべきかをレポートでお渡しします。売り込みは一切しませんので、お気軽にどうぞ。</p>
-      <div class="contact-form-wrap">
-        <div class="contact-cta-box">
-          <div class="contact-cta-checks">
-            <div class="contact-cta-check">✓ 費用は一切かかりません</div>
-            <div class="contact-cta-check">✓ 売り込みは一切しません</div>
-            <div class="contact-cta-check">✓ 記入は3分程度で完了します</div>
-          </div>
-          <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--large btn--block">
-            無料診断を申し込む →
-          </a>
-          <p class="form-note">Googleフォームが開きます。3営業日以内にご連絡いたします。</p>
-        </div>
+  <!-- ========== CTA ========== -->
+  <section class="cta" id="contact">
+    <div class="cta__inner" data-reveal>
+      <div class="cta__text">
+        <p class="head__en en">Contact</p>
+        <h2>まずは、今の集客を<br>一緒に見てみませんか。</h2>
+        <p>サイト・SNS・Googleマップの現状を無料で診断し、レポートでお渡しします。売り込みはしません。</p>
+      </div>
+      <div class="cta__btns">
+        <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="btn btn--accent">無料診断を申し込む<i class="arrow arrow--white" aria-hidden="true"></i></a>
+        <p class="cta__note">Googleフォームが開きます（記入3分程度）。お預かりした情報は<a href="privacy.html">プライバシーポリシー</a>に沿って取り扱います。</p>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ========== FOOTER ========== -->
   <footer class="footer">
-    <div class="container">
-      <div class="footer__logo">ACCEL<span>LINK</span></div>
-      <p class="footer__address">〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F</p>
-      <p class="footer__copy">© 2026 ACCEL LINK. All rights reserved.</p>
+    <div class="wrap footer__inner">
+      <div>
+        <a href="#" class="logo"><span class="logo__main">ACCEL<span>LINK</span></span><span class="logo__sub">地域ビジネスのWeb集客</span></a>
+        <p class="footer__address">〒107-0062 東京都港区南青山3丁目1番36号 青山丸竹ビル6F</p>
+      </div>
+      <nav class="footer__nav" aria-label="フッターメニュー">
+        <a href="#issue">お悩み</a><a href="#service">サービス</a><a href="#reason">選ばれる理由</a><a href="#industry">対応業界</a><a href="#price">料金</a><a href="#flow">ご相談の流れ</a><a href="#profile">代表について</a><a href="#faq">よくある質問</a>
+      </nav>
+    </div>
+    <div class="wrap footer__bottom">
+      <p class="en">© 2026 ACCEL LINK</p>
+      <span class="footer__links"><a href="privacy.html">プライバシーポリシー</a><a href="#" class="en footer__top">Page top ↑</a></span>
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20261103k"></script>
 </body>
 </html>
