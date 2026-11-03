@@ -64,4 +64,20 @@ if (document.querySelector('.hero')) {
     }, { rootMargin: '0px 0px -8% 0px' });
     document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
   }
+
+  // スマホ用の追従ボタン：ヒーローを過ぎたら表示し、問い合わせ欄が見えている間は隠す
+  const sp = document.getElementById('spCta');
+  const heroEl = document.querySelector('.hero');
+  const contactEl = document.getElementById('contact');
+  if (sp && heroEl && 'IntersectionObserver' in window) {
+    let heroVisible = true, contactVisible = false;
+    const update = () => {
+      const show = !heroVisible && !contactVisible;
+      sp.classList.toggle('is-show', show);
+      sp.setAttribute('aria-hidden', String(!show));
+      sp.tabIndex = show ? 0 : -1;
+    };
+    new IntersectionObserver(([e]) => { heroVisible = e.isIntersecting; update(); }).observe(heroEl);
+    if (contactEl) new IntersectionObserver(([e]) => { contactVisible = e.isIntersecting; update(); }).observe(contactEl);
+  }
 }

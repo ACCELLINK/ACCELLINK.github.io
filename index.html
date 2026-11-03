@@ -20,34 +20,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Outfit:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="top.css?v=20261103n">
-  <!-- アクセス解析（GA4 / Microsoft Clarity）: IDを入れると有効になる。空のままなら何も読み込まない -->
-  <script>
-    (function () {
-      var GA4_ID = "";      // 例: G-XXXXXXXXXX
-      var CLARITY_ID = "";  // 例: abcd1234ef
-      if (GA4_ID) {
-        var s = document.createElement("script");
-        s.async = true; s.src = "https://www.googletagmanager.com/gtag/js?id=" + GA4_ID;
-        document.head.appendChild(s);
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = function () { dataLayer.push(arguments); };
-        gtag("js", new Date()); gtag("config", GA4_ID);
-        // 問い合わせフォームへのクリックを計測
-        document.addEventListener("click", function (e) {
-          var a = e.target.closest && e.target.closest('a[href*="forms.gle"]');
-          if (a) gtag("event", "form_click", { link_text: a.textContent.trim() });
-        });
-      }
-      if (CLARITY_ID) {
-        (function (c, l, a, r, i, t, y) {
-          c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments); };
-          t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
-          y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
-        })(window, document, "clarity", "script", CLARITY_ID);
-      }
-    })();
-  </script>
+  <link rel="stylesheet" href="top.css?v=20261103q">
+  <script src="analytics.js?v=20261103q"></script>
 </head>
 <body>
 
@@ -80,6 +54,8 @@
       <path class="b-white" d="M820,690 C960,650 1060,560 1150,450 C1240,340 1330,250 1480,180 L1480,196 C1350,260 1270,345 1185,450 C1090,570 990,660 820,690 Z"/>
     </svg>
 
+    <div class="hero__map" aria-hidden="true"></div>
+
     <div class="hero__inner">
       <div class="hero__copy" data-reveal>
         <p class="hero__label"><span class="en">ACCEL LINK</span>地域ビジネス専門のWebマーケティング</p>
@@ -92,9 +68,9 @@
       <aside class="numbers" aria-label="代表の実績" data-reveal>
         <p class="numbers__note">代表がこれまでに担当してきた規模</p>
         <dl class="numbers__list">
-          <div><dt>上場企業での広告運用</dt><dd><span class="num en">1</span><span class="unit">億円</span><small>/月</small></dd></div>
-          <div><dt>運用したSEOメディア</dt><dd><span class="num en">50</span><span class="unit">万</span><small>セッション/月 ×2媒体</small></dd></div>
-          <div><dt>SEO流入からの収益化</dt><dd><span class="num en">6,000</span><span class="unit">万円</span><small>/月</small></dd></div>
+          <div><dt><span class="nb">上場企業での</span><span class="nb">広告運用</span></dt><dd><span class="num en">1</span><span class="unit">億円</span><small>/月</small></dd></div>
+          <div><dt><span class="nb">運用した</span><span class="nb">SEOメディア</span></dt><dd><span class="num en">50</span><span class="unit">万</span><small><span class="nb">セッション/月</span> <span class="nb">×2媒体</span></small></dd></div>
+          <div><dt><span class="nb">SEO流入からの</span><span class="nb">収益化</span></dt><dd><span class="num en">6,000</span><span class="unit">万円</span><small>/月</small></dd></div>
         </dl>
         <p class="numbers__career"><span class="nb">東証プライム上場の商社・</span><span class="nb">大手PR会社で実務を経験</span></p>
       </aside>
@@ -109,7 +85,7 @@
         <p class="head__ja">お悩み</p>
         <h2 class="head__title"><span class="nb">こんなことで、</span><span class="nb">止まっていませんか。</span></h2>
       </header>
-      <ul class="cards cards--3">
+      <ul class="cards cards--3 cards--row">
         <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/wallet.svg)"></i></span><h3>ポータルの手数料が重い</h3><p><span class="nb">やめたら客足が</span><span class="nb">止まりそうで、</span><span class="nb">払い続けている。</span></p></li>
         <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/map.svg)"></i></span><h3><span class="nb">Googleマップで</span><span class="nb">見つからない</span></h3><p><span class="nb">口コミが増えず、</span><span class="nb">近所の競合に</span><span class="nb">負けている。</span></p></li>
         <li class="card" data-reveal><span class="ic-circle"><i class="ic" style="--ic:url(images/icons/question.svg)"></i></span><h3><span class="nb">何から手をつければ</span><span class="nb">いいか分からない</span></h3><p><span class="nb">SNS、HP、AI検索…</span><span class="nb">やることが多すぎて</span><span class="nb">決められない。</span></p></li>
@@ -125,7 +101,7 @@
         <p class="head__ja">サービス</p>
         <h2 class="head__title"><span class="nb">集客から制作・</span><span class="nb">仕組み化まで、</span><span class="nb">まとめてお任せ。</span></h2>
       </header>
-      <div class="cards cards--4">
+      <div class="cards cards--4 cards--grid2">
         <article class="card card--white" data-reveal>
           <span class="ic-badge"><i class="ic" style="--ic:url(images/icons/megaphone.svg)"></i></span>
           <h3>集める</h3>
@@ -162,10 +138,10 @@
         <p class="head__ja">選ばれる理由</p>
         <h2 class="head__title"><span class="nb">ACCEL LINKに頼む、</span><span class="nb">3つの理由。</span></h2>
       </header>
-      <ol class="cards cards--3">
-        <li class="card" data-reveal><p class="card__no en">01</p><h3><span class="nb">大手と同じ水準の</span><span class="nb">ノウハウ</span></h3><p><span class="nb">月1億円規模の広告運用で培った設計を、</span><span class="nb">お店の規模に合わせて使います。</span></p></li>
+      <ol class="cards cards--3 cards--row">
+        <li class="card" data-reveal><p class="card__no en">01</p><h3><span class="nb">大手と同じ水準の</span><span class="nb">ノウハウ</span></h3><p><span class="nb">月1億円規模の</span><span class="nb">広告運用で培った</span><span class="nb">設計を、</span><span class="nb">お店の規模に合わせて使います。</span></p></li>
         <li class="card" data-reveal><p class="card__no en">02</p><h3>窓口がひとつ</h3><p><span class="nb">広告・制作・システムを</span><span class="nb">バラバラに頼む必要は</span><span class="nb">ありません。</span></p></li>
-        <li class="card" data-reveal><p class="card__no en">03</p><h3>担当が変わらない</h3><p><span class="nb">最初から最後まで代表が直接担当し、</span><span class="nb">改善を速く回します。</span></p></li>
+        <li class="card" data-reveal><p class="card__no en">03</p><h3>担当が変わらない</h3><p><span class="nb">最初から最後まで</span><span class="nb">代表が直接担当し、</span><span class="nb">改善を速く回します。</span></p></li>
       </ol>
     </div>
   </section>
@@ -178,7 +154,7 @@
         <p class="head__ja">対応業界</p>
         <h2 class="head__title"><span class="nb">業界別のページで、</span><span class="nb">詳しく</span><span class="nb">ご紹介しています。</span></h2>
       </header>
-      <div class="cards cards--4">
+      <div class="cards cards--4 cards--grid2">
         <a href="seitai/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/seitai.svg)"></i><h3><span class="nb">整体院・</span><span class="nb">接骨院・</span><span class="nb">鍼灸院</span></h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
         <a href="salon/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/salon.svg)"></i><h3><span class="nb">美容室・</span><span class="nb">エステ・</span><span class="nb">ネイル</span></h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
         <a href="clinic/index.html" class="card card--white card--link" data-reveal><i class="ic ind__ic" style="--ic:url(images/icons/clinic.svg)"></i><h3><span class="nb">クリニック・</span><span class="nb">歯科医院</span></h3><span class="more en">View more<i class="arrow" aria-hidden="true"></i></span></a>
@@ -195,7 +171,7 @@
         <p class="head__ja">料金の目安</p>
         <h2 class="head__title"><span class="nb">予算に合わせて、</span><span class="nb">効く施策だけを。</span></h2>
       </header>
-      <div class="cards cards--3">
+      <div class="cards cards--3 cards--row cards--price">
         <div class="card price" data-reveal>
           <p class="price__target">まず1つ改善したい</p>
           <p class="price__val">月<span class="en">3〜5</span>万円</p>
@@ -222,7 +198,7 @@
         <p class="head__ja">ご相談の流れ</p>
         <h2 class="head__title"><span class="nb">相談から、</span><span class="nb">最短1週間で</span><span class="nb">動き出せます。</span></h2>
       </header>
-      <ol class="cards cards--4">
+      <ol class="cards cards--4 cards--grid2">
         <li class="card card--white" data-reveal><p class="card__no en">Step 01</p><h3>無料相談</h3><p>課題と予算感を伺います。</p></li>
         <li class="card card--white" data-reveal><p class="card__no en">Step 02</p><h3>無料診断レポート</h3><p><span class="nb">何から手をつけるべきかを</span><span class="nb">お渡しします。</span></p></li>
         <li class="card card--white" data-reveal><p class="card__no en">Step 03</p><h3>ご提案</h3><p><span class="nb">予算に合わせたプランを</span><span class="nb">ご提案します。</span></p></li>
@@ -313,6 +289,8 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20261103n"></script>
+  <a href="https://forms.gle/tFz5SyBMukdLWGup6" target="_blank" rel="noopener noreferrer" class="sp-cta" id="spCta" aria-hidden="true" tabindex="-1">無料で集客診断を受ける<i class="arrow arrow--accent" aria-hidden="true"></i></a>
+
+  <script src="script.js?v=20261103q"></script>
 </body>
 </html>
