@@ -526,7 +526,10 @@ p, dd, li { text-wrap: pretty; }
   .menu-btn { width: 42px; height: 42px; }
   .hero { padding: 76px 0 215px; }
   .hero__bands { left: auto; right: -150px; width: 800px; height: 500px; }
-  .hero--sub .hero__label { white-space: normal; }
+  .hero--sub .hero__label { display: none; }   /* パンくずと同じ内容なのでスマホでは省く */
+  .hero--sub .crumb { margin-bottom: 12px; }
+  .hero--sub .hero__title { font-size: 1.8rem; }
+  .hero--sub .hero__text { font-size: .86rem; line-height: 1.7; }
   .hero__inner { gap: 18px; }
   .hero__label { margin-bottom: 14px; font-size: .7rem; letter-spacing: .02em; flex-wrap: nowrap; gap: 8px; white-space: nowrap; }
   .hero__label .en { flex-shrink: 0; }
