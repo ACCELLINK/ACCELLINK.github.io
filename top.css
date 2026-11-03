@@ -51,6 +51,7 @@ button { font: inherit; color: inherit; }
 .wrap { width: var(--wrap); margin: 0 auto; }
 h1, h2, h3, h4, .head__lead, .hero__text { word-break: auto-phrase; }
 p, dd, li { text-wrap: pretty; }
+.nb { display: inline-block; max-width: 100%; }  /* 言葉の途中で改行させない（Safari対策） */
 
 /* ---------------------------------------------- アイコン（素材をマスクにして色を揃える） */
 .ic {
