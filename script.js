@@ -39,7 +39,7 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 // ===== トップページ専用 =====
-// 動きは「表示時にふわっと出る」だけに限定（チカチカする演出は入れない）
+// 動きは控えめに（点滅・繰り返しはなし）。prefers-reduced-motion では動かさない
 if (document.querySelector('.hero')) {
   const syncMenu = () => hamburger?.setAttribute('aria-expanded', hamburger.classList.contains('open'));
   hamburger?.addEventListener('click', syncMenu);
@@ -55,14 +55,53 @@ if (document.querySelector('.hero')) {
   const head = document.getElementById('header');
   window.addEventListener('scroll', () => head?.classList.toggle('is-solid', window.scrollY > 20), { passive: true });
 
-  if ('IntersectionObserver' in window) {
-    document.documentElement.classList.add('js');
+  // ---- 動き：場所ごとに種類を変える。1回だけ・点滅や繰り返しはなし ----
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if ('IntersectionObserver' in window && !reduce) {
+    const root = document.documentElement;
+    root.classList.add('js');
+
+    // ヒーロー：見出しを行ごとに包んで、下からせり上げる
+    const title = document.querySelector('.hero__title');
+    if (title) {
+      title.innerHTML = title.innerHTML.split(/<br\s*\/?>/i)
+        .map((h, i) => `<span class="line"><span style="transition-delay:${0.15 + i * 0.12}s">${h}</span></span>`).join('');
+    }
+    // 実績の数字はカウントアップ
+    const countUp = el => {
+      const target = parseInt(el.textContent.replace(/,/g, ''), 10);
+      if (!target || target < 2) return;
+      const start = performance.now(), dur = 1400;
+      const tick = now => {
+        const p = Math.min((now - start) / dur, 1), eased = 1 - Math.pow(1 - p, 4);
+        el.textContent = Math.round(target * eased).toLocaleString('ja-JP');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      el.textContent = '0';
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(() => requestAnimationFrame(() => {
+      root.classList.add('is-loaded');
+      setTimeout(() => document.querySelectorAll('.numbers .num').forEach(countUp), 800);
+    }));
+
+    // スクロールで出てくる要素に、種類ごとのクラスを付ける
+    document.querySelectorAll('.head__en, .head__ja, .head__title, .profile__photo').forEach(el => el.setAttribute('data-motion', ''));
+    // カードは並び順に少しずつ遅らせる
+    document.querySelectorAll('.cards').forEach(group => {
+      [...group.children].forEach((c, i) => { c.style.transitionDelay = `${i * 0.09}s`; });
+    });
+
     const io = new IntersectionObserver(entries => {
       entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        el.classList.add('is-in'); io.unobserve(el);
+        // 出終わったら遅延を外す（ホバー時の反応を遅らせないため）
+        if (el.style.transitionDelay) setTimeout(() => { el.style.transitionDelay = ''; }, 1600);
       });
     }, { rootMargin: '0px 0px -8% 0px' });
-    document.querySelectorAll('[data-reveal]').forEach(el => io.observe(el));
+    document.querySelectorAll('[data-reveal]:not(.hero [data-reveal]), [data-motion]').forEach(el => io.observe(el));
   }
 
   // スマホ用の追従ボタン：ヒーローを過ぎたら表示し、問い合わせ欄が見えている間は隠す
