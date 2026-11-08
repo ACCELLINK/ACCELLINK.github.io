@@ -170,7 +170,7 @@ p, dd, li { text-wrap: pretty; }
 .split > .head { margin-bottom: 0; position: sticky; top: 120px; }
 
 /* ---------------------------------------------- HERO */
-.hero { position: relative; padding: 120px 0 160px; overflow: hidden; }
+.hero { position: relative; padding: 120px 0 216px; overflow: hidden; }
 .hero__bands { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
 .hero__bands .b-light { fill: #D6DDE9; }
 .hero__bands .b-navy { fill: var(--navy-2); }
@@ -317,7 +317,7 @@ p, dd, li { text-wrap: pretty; }
 .cta__note a { text-decoration: underline; text-underline-offset: 3px; }
 
 /* ---------------------------------------------- 下層（業界別ページ） */
-.hero--sub { padding: 112px 0 152px; }
+.hero--sub { padding: 112px 0 232px; }
 .hero--sub .hero__title { font-size: clamp(2.2rem, 4.2vw, 3.5rem); }
 .crumb { display: flex; flex-wrap: wrap; gap: 8px; font-size: .8rem; font-weight: 700; color: var(--muted); margin-bottom: 24px; }
 .crumb a { color: var(--strong); text-decoration: underline; text-underline-offset: 3px; }
@@ -378,7 +378,7 @@ p, dd, li { text-wrap: pretty; }
 
 /* ヒーロー：読み込み時に順番に出る */
 .js .hero [data-reveal] { opacity: 1; transform: none; transition: none; }
-.js .hero__title .line { display: block; overflow: hidden; padding-bottom: .06em; margin-bottom: -.06em; }
+.js .hero__title .line { display: block; overflow: hidden; padding: .1em 0; margin: -.1em 0; }
 .js .hero__title .line > span { display: block; transform: translateY(105%); transition: transform 1.1s var(--out); }
 .js.is-loaded .hero__title .line > span { transform: none; }
 .js .crumb, .js .hero__label, .js .hero__text, .js .hero__btns, .js .numbers {
@@ -618,4 +618,12 @@ p, dd, li { text-wrap: pretty; }
   .cta__text p:last-child { font-size: .86rem; }
   .footer__inner { padding-bottom: 24px; gap: 24px; }
   .footer__nav { gap: 8px 24px; font-size: .82rem; }
+}
+
+/* 幅の狭い端末（〜359px）は文章が長く折り返すので、帯と実績が重ならないよう下を広げる */
+@media (max-width: 359px) {
+  .hero:not(.hero--sub) { padding-bottom: 264px; }
+  .hero__label { font-size: .64rem; gap: 4px; }
+  .hero__label .en { padding: 4px 8px; }
+  .numbers .num { font-size: 1.5rem; }
 }
